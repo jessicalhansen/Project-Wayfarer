@@ -1,7 +1,7 @@
-const CityCard = () => {
+const CitiesCard = () => {
   return (
-      <li>San Francisco</li>
+    <li>San Francisco</li>
   );
 };
 
-export default CityCard;
+export default CitiesCard;

@@ -2,10 +2,10 @@ import CitiesList from '../components/CitiesList';
 
 const CitiesPage = () => {
   return (
-    <div>
+    <aside>
       <header>Cities</header>
       {CitiesList}
-    </div>
+    </aside>
   );
 };
 
