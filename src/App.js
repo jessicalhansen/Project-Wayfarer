@@ -8,6 +8,7 @@ function App() {
       <nav>
         <h1>Project Wayfarer</h1>
         <Link to='/'>Home</Link>{'  '}
+        <Link to='/cities'>Cities</Link>{'  '}
         <Link to='/login'>Log in</Link>{'  '}
         <Link to='/signup'>Sign up</Link>
       </nav>
@@ -17,6 +18,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

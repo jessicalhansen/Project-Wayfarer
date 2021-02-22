@@ -1,8 +1,11 @@
+import CitiesList from '../components/CitiesList';
+
 const CitiesPage = () => {
   return (
-    <div>
-      <h1>Cities Index - Project Wayfarer</h1>
-    </div>
+    <aside>
+      <header>Cities</header>
+      {CitiesList}
+    </aside>
   );
 };
 
