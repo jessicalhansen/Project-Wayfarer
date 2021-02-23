@@ -2,12 +2,10 @@ import React from "react";
 
 class NewPost extends React.Component {
   state = {
-    post: {
       userId: '0',
       cityId: '0',
       title: "",
-      body: "",
-    }
+      body: ""
   };
 
   handleNewPost = (event) => {
@@ -30,13 +28,9 @@ class NewPost extends React.Component {
       .then((jsonData) => {
         console.log(jsonData);
         this.setState({
-         post: {
-          userId: '',
-          cityId: '',
-          title: "",
-          body: "",
-          }
+          posts: this.state.body 
         })
+        console.log(this.posts);
       }).catch((err) => {
           console.log(err);
         });
