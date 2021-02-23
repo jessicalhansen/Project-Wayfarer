@@ -1,11 +1,11 @@
-// import CityDetailCard from '../components/CityDetailCard';
+import CityDetailCard from '../components/CityDetailCard';
 
-// const CityDetailPage = () => {
-//   return (
-//     <div>
-//       <CityDetailCard />
-//     </div>
-//   );
-// };
+const CityDetailPage = (props) => {
+	return (
+		<div>
+			<CityDetailCard city={props.city} />
+		</div>
+	);
+};
 
-// export default CityDetailPage;
+export default CityDetailPage;

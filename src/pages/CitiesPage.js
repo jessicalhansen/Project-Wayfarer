@@ -1,9 +1,16 @@
 import React from 'react';
 import CitiesList from '../components/CitiesList';
+import CityDetailPage from './CityDetailPage';
 
 class CitiesPage extends React.Component {
 	state = {
 		cities: [],
+		city: {
+			name: 'San-Fran',
+			state: 'Cali',
+			country: 'USA',
+			image: '',
+		},
 	};
 
 	componentDidMount() {
@@ -23,9 +30,14 @@ class CitiesPage extends React.Component {
 
 	render() {
 		return (
-			<aside>
-				<CitiesList cities={this.state.cities} />
-			</aside>
+			<div className="flex justify-evenly">
+				<div>
+					<CitiesList cities={this.state.cities} />
+				</div>
+				<div>
+					<CityDetailPage city={this.state.city} />
+				</div>
+			</div>
 		);
 	}
 }
