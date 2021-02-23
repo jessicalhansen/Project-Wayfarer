@@ -1,5 +1,18 @@
 const CitiesCard = (props) => {
-	return <li key={props.cities._id}>{props.cities.name}</li>;
+  return (
+    <>
+      <div className="list-component">
+        <div className="list-card">
+          <div className="row">
+            <li key={props.cities._id}>
+              <img src={props.cities.image} alt="city_image" />
+              {props.cities.name}
+            </li>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default CitiesCard;
