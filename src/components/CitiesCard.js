@@ -1,6 +1,8 @@
-const CitiesCard = () => {
+const CitiesCard = (props) => {
   return (
-    <li>San Francisco</li>
+    <>
+      <li>{props.cities.name}</li>
+    </>
   );
 };
 
