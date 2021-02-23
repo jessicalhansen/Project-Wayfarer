@@ -1,13 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
-var bodyParser = require('body-parser');
-var port = process.env.PORT || '3000';
-// var usersRouter = require('./routes/users');
-var postsRouter = require('./routes/posts');
-var citiesRouter = require('./routes/cities');
-
-var app = express();
-
+require('dotenv').config();
+const createError = require('http-errors');
+const express = require('express');
+const bodyParser = require('body-parser');
+const port = process.env.PORT || '3000';
+// const usersRouter = require('./routes/users');
+const postsRouter = require('./routes/posts');
+const citiesRouter = require('./routes/cities');
+const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use('/users', usersRouter);
