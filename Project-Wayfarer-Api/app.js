@@ -2,16 +2,16 @@ require('dotenv').config();
 const createError = require('http-errors');
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '4000';
 // const usersRouter = require('./routes/users');
 const postsRouter = require('./routes/posts');
 const citiesRouter = require('./routes/cities');
 const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use('/users', usersRouter);
-app.use('/cities', citiesRouter);
-app.use('/posts', postsRouter);
+// app.use('/api/users', usersRouter);
+app.use('/api/cities', citiesRouter);
+app.use('/api/posts', postsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
