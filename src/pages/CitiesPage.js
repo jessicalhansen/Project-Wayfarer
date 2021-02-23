@@ -4,8 +4,9 @@ import CityDetailPage from './CityDetailPage';
 
 class CitiesPage extends React.Component {
 	state = {
-	cities: [],
+		cities: [],
 		city: {
+			id: '60347f311e79196784a75654',
 			name: 'San-Fran',
 			state: 'Cali',
 			country: 'USA',
