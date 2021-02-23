@@ -5,7 +5,7 @@ const index = (req, res) => {
 	db.City.find({}, (err, allCities) => {
 		if (err) return console.log(err);
 		// Send back data as JSON object
-		res.json(allCities);
+		return res.json(allCities);
 	});
 };
 
@@ -14,7 +14,7 @@ const show = (req, res) => {
 	db.City.findById(req.params.id, (err, foundCity) => {
 		if (err) return console.log(err);
 		// Send back data to client as JSON object
-		res.json(foundCity);
+		return res.json(foundCity);
 	});
 };
 
@@ -22,7 +22,7 @@ const create = (req, res) => {
 	// Query DB to create a new City
 	db.City.create(req.body, (err, newCity) => {
 		if (err) return console.log(err);
-		res.json(newCity);
+		return res.json(newCity);
 	});
 };
 
@@ -33,7 +33,7 @@ const update = (req, res) => {
 		{ new: true },
 		(err, updatedCity) => {
 			if (err) return console.log(err);
-			res.json(updatedCity);
+			return res.json(updatedCity);
 		}
 	);
 };
@@ -41,7 +41,7 @@ const update = (req, res) => {
 const destroy = (req, res) => {
 	db.City.findByIdAndDelete(req.params.id, (err, deletedCity) => {
 		if (err) return console.log(err);
-		res.json(deletedCity);
+		return res.json(deletedCity);
 	});
 };
 

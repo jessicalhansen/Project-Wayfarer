@@ -10,17 +10,16 @@ class CitiesPage extends React.Component {
 		fetch('http://localhost:4000/api/v1/cities')
 			.then((res) => res.json())
 			.then((jsonData) => {
-				console.log(jsonData);
 				this.setState({
-					cities: jsonData
+					cities: jsonData,
 				});
 			})
 			.catch((err) => {
 				console.log('====================================');
 				console.log(err);
 				console.log('====================================');
-			})
-	};
+			});
+	}
 
 	render() {
 		return (
@@ -29,6 +28,6 @@ class CitiesPage extends React.Component {
 			</aside>
 		);
 	}
-};
+}
 
 export default CitiesPage;
