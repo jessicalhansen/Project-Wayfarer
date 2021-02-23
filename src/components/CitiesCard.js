@@ -1,7 +1,7 @@
 const CitiesCard = (props) => {
   return (
     <>
-      <li>{props.city.name}</li>
+      <li>{props.cities.name}</li>
     </>
   );
 };

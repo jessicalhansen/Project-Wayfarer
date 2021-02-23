@@ -3,6 +3,7 @@ import CitiesCard from './CitiesCard';
 
 const CitiesList = (props) => {
   return props.cities.map((citiesObj) => {
+    console.log(citiesObj);
     return (
       <>
         <header>
@@ -11,7 +12,7 @@ const CitiesList = (props) => {
         <ul>
           <CitiesCard
             key={citiesObj._id}
-            city={citiesObj}
+            cities={citiesObj}
           />
         </ul>
       </>

@@ -7,7 +7,7 @@ class CitiesPage extends React.Component {
 	};
 
 	componentDidMount() {
-		fetch('http://localhost:4000/api/cities')
+		fetch('http://localhost:4000/api/v1/cities')
 			.then((res) => res.json())
 			.then((jsonData) => {
 				console.log(jsonData);
@@ -15,13 +15,17 @@ class CitiesPage extends React.Component {
 					cities: jsonData
 				});
 			})
-			.catch()
+			.catch((err) => {
+				console.log('====================================');
+				console.log(err);
+				console.log('====================================');
+			})
 	};
 
 	render() {
 		return (
 			<aside>
-				<CitiesList />
+				<CitiesList cities={this.state.cities} />
 			</aside>
 		);
 	}
