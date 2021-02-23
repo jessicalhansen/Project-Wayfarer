@@ -4,7 +4,6 @@ const index = (req, res) => {
 	// Query DB for all Cities
 	db.City.find({}, (err, allCities) => {
 		if (err) return console.log(err);
-
 		// Send back data as JSON object
 		res.json(allCities);
 	});
