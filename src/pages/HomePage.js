@@ -2,8 +2,8 @@ const HomePage = () => {
   return (
     <div>
       <div>
-        <h1>Image Carousel Goes Here...</h1>
         {/* Image Carousel */}
+        <h1>Image Carousel Goes Here...</h1>
       </div>
 
       <div>
