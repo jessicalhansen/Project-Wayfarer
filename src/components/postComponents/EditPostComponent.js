@@ -54,9 +54,9 @@ class EditPost extends React.Component {
 						/>
 					</div>
 					<div>
-						<label htmlFor="publisher">Body</label>
+						<label htmlFor="body">Body</label>
 						<br />
-						<input
+						<textarea
 							type="text"
 							id="body"
 							name="body"
