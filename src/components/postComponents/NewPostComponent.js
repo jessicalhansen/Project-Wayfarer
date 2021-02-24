@@ -52,6 +52,7 @@ class NewPost extends React.Component {
 				<h1 className="text-3xl my-2">New Post</h1>
 				<div>
 					<form
+						id="post-form-inner"
 						onSubmit={this.handleSubmitPost}
 						className="flex flex-col align-evenly form"
 					>
@@ -80,10 +81,10 @@ class NewPost extends React.Component {
 								onChange={this.handleNewPost}
 							/>
 						</div>
-						<div>
+						<div className="my-4">
 							<button
 								type="submit"
-								className="btn bg-gray-700 text-white center"
+								className="btn bg-gray-300 text-black center"
 							>
 								Add Post
 							</button>

@@ -6,7 +6,11 @@ const CitiesList = (props) => {
 		return <CitiesCard key={citiesObj._id} cities={citiesObj} />;
 	});
 
-	return <ul>{cities}</ul>;
+	return (
+		<div>
+			<ul>{cities}</ul>
+		</div>
+	);
 };
 
 export default CitiesList;
