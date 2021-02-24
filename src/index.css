@@ -31,16 +31,10 @@ body {
 	min-height: 85vh;
 	overflow: scroll;
 }
-.city-card {
-	cursor: pointer;
-}
 #post {
 	max-height: 35vh;
 	overflow: scroll;
 	box-sizing: border-box;
-}
-.post-card {
-	cursor: pointer;
 }
 #icon {
 	position: fixed;
@@ -75,6 +69,11 @@ body {
 	justify-content: space-between;
 	padding: 2em;
 }
+#show-post {
+	min-height: 80vh;
+	max-height: 90vh;
+	overflow: scroll;
+}
 .post-card,
 .city-card {
 	border-radius: 1.5em;
@@ -82,6 +81,7 @@ body {
 	-moz-border-radius: 1.5em;
 	-ms-border-radius: 1.5em;
 	-o-border-radius: 1.5em;
+	cursor: pointer;
 }
 .list-img {
 	width: 100px;

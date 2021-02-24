@@ -11,7 +11,7 @@ const index = (req, res) => {
 
 const show = (req, res) => {
 	// Get City from DB by ID
-	db.City.findById(req.params.id, (err, foundCity) => {
+	db.City.findOne({ _id: req.params.id }, (err, foundCity) => {
 		if (err) return console.log(err);
 		// Send back data to client as JSON object
 		return res.json(foundCity);
