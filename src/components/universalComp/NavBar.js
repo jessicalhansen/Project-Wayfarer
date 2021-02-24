@@ -9,7 +9,7 @@ export default function NavBar() {
 				<NavLink
 					to=""
 					exact
-					activeClassName="text-gray-800 bg-gray-300"
+					activeClassName="active-link text-gray-800 bg-gray-300"
 					className="logo inline-flex items-center py-7 px-3 mx-20 text-white hover:text-green-700 text-5xl font-bold cursive tracking-widest"
 				>
 					Project Wayfarer
@@ -17,28 +17,28 @@ export default function NavBar() {
 				<nav className="flex">
 					<NavLink
 						to="/cities"
-						activeClassName="text-gray-800 bg-gray-300"
+						activeClassName="active-link text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>
 						Cities
 					</NavLink>
 					<NavLink
 						to="about"
-						activeClassName="text-gray-800 bg-gray-300"
+						activeClassName="active-link text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>
 						About
 					</NavLink>
 					<NavLink
 						to="/login"
-						activeClassName="text-gray-800 bg-gray-300"
+						activeClassName="active-link text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>
 						Login
 					</NavLink>
 					<NavLink
 						to="/signup"
-						activeClassName="text-gray-800 bg-gray-300"
+						activeClassName="active-link text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>
 						Sign-Up
