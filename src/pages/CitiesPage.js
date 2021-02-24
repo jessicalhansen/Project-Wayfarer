@@ -52,7 +52,7 @@ class CitiesPage extends React.Component {
 			<div className="flex h-full">
 				<div className="w-full">
 					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
-					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+					<div className="p-3 border-black border-2 city-comp bg-gray-800">
 						<CitiesList
 							cities={this.state.cities}
 							showCityHandler={this.showCityHandler}
