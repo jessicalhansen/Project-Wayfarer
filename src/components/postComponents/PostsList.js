@@ -2,8 +2,9 @@ import React from 'react';
 import PostsCard from './PostsCard';
 
 const PostsList = (props) => {
-	const posts = props.posts.map((postsObj) => {
-		return (
+	const filteredPosts = [];
+	props.posts.map((postsObj) => {
+		return filteredPosts.unshift(
 			<PostsCard
 				key={postsObj._id}
 				post={postsObj}
@@ -12,7 +13,7 @@ const PostsList = (props) => {
 		);
 	});
 
-	return <ul>{posts}</ul>;
+	return <ul>{filteredPosts}</ul>;
 };
 
 export default PostsList;

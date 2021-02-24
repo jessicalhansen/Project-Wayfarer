@@ -16,7 +16,7 @@ class CityDetailPage extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div id="detail">
 				<CityDetailCard city={this.props.city} />
 				<div className="text-right my-4 mx-3">
 					<button
@@ -27,8 +27,10 @@ class CityDetailPage extends React.Component {
 					</button>
 				</div>
 				<div id="post-feed">
+
 					<div className="bg-gray-300 border-black border-2 rounded">
 						<PostsList posts={this.props.posts} deletePost={this.props.deletePost}/>
+
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">
