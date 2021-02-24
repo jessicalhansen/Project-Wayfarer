@@ -11,7 +11,7 @@ const PostsCard = (props) => {
 					>
 						Delete
 					</button>
-					<p>{Date(props.post.createdAt)}</p>
+					<p>{props.post.createdAt}</p>
 					<button
 						className="btn bg-gray-700 text-gray-300"
 						// onClick={() => props.updatePost(props.post._id)}
