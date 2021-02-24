@@ -31,6 +31,41 @@ body {
 	bottom: 0;
 	width: 100%;
 }
+#post-form {
+	position: absolute;
+	border: black 5px solid;
+	border-radius: 0.5em;
+	padding: 2em;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	top: 25%;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	display: none;
+}
+#post-form-inner {
+	display: flex;
+	height: max-content;
+	flex-direction: column;
+	align-content: space-between;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2em;
+}
+.list-img {
+	width: 100px;
+}
+.city-comp {
+	min-width: 50%;
+	min-height: 70vh;
+	overflow: scroll;
+}
+.form {
+	align-content: space-between;
+}
 .cursive {
 	font-family: Amatic SC, cursive;
 	font-weight: 700;
