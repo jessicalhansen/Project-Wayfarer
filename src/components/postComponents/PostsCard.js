@@ -13,11 +13,7 @@ const PostsCard = (props) => {
 					>
 						Delete
 					</button>
-<<<<<<< HEAD
 					<Link to={`/editpost/${props.post._id}`}>
-=======
-					<p>{Date(props.post.createdAt)}</p>
->>>>>>> submaster
 					<button
 						className="btn bg-gray-700 text-gray-300"
 						// onClick={() => props.updatePost(props.post._id)}
