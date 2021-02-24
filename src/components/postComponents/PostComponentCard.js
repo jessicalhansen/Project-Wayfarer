@@ -1,1 +1,1 @@
-const PostComponentCard = 
+
