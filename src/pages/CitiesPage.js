@@ -48,31 +48,31 @@ class CitiesPage extends React.Component {
 	};
 
 	handleDeletePost = (postId) => {
-    console.log(postId);
-    let confirmed = window.confirm('Are you sure you want to delete this post?');
-    if(confirmed) {
-      console.log('Fire away Sara Doe!');
-      fetch(`http://localhost:4000/api/v1/posts/${postId}`, {
-        method: 'DELETE'
-      })
-      .then((response) => {
-        return response.json()
-      })
-      .then((jsonData) => {
-        console.log(jsonData);
-        const postCopy = {...this.state.posts};
-        const updatedPosts = postCopy.filter((postObj) => {
-          return postObj._id !== postId
-        })
-        this.setState({
-          post: updatedPosts
-        })
-      })
-      .catch((err) => console.log(err));
-    }
-  }
-
-
+		console.log(postId);
+		let confirmed = window.confirm(
+			'Are you sure you want to delete this post?'
+		);
+		if (confirmed) {
+			console.log('Fire away Sara Doe!');
+			fetch(`http://localhost:4000/api/v1/posts/${postId}`, {
+				method: 'DELETE',
+			})
+				.then((response) => {
+					return response.json();
+				})
+				.then((jsonData) => {
+					console.log(jsonData);
+					const postCopy = { ...this.state.posts };
+					const updatedPosts = postCopy.filter((postObj) => {
+						return postObj._id !== postId;
+					});
+					this.setState({
+						post: updatedPosts,
+					});
+				})
+				.catch((err) => console.log(err));
+		}
+	};
 
 	render() {
 		return (
@@ -91,12 +91,12 @@ class CitiesPage extends React.Component {
 						The city of {this.state.city.name}
 					</h1>
 
-					<div
-						id="post"
-						className="p-3 border-black border-2 city-comp bg-gray-700"
-					>
-						<CityDetailPage city={this.state.city} posts={this.state.posts} deletePost={this.handleDeletePost}/>
-
+					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+						<CityDetailPage
+							city={this.state.city}
+							posts={this.state.posts}
+							deletePost={this.handleDeletePost}
+						/>
 					</div>
 				</div>
 			</div>
