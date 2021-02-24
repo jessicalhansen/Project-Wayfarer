@@ -38,6 +38,7 @@ class NewPost extends React.Component {
 		document.getElementById('post-form').style.display = 'none';
 		document.getElementById('title').value = '';
 		document.getElementById('body').value = '';
+		this.props.handleRerender();
 	};
 
 	render() {

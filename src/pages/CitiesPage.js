@@ -21,6 +21,7 @@ class CitiesPage extends React.Component {
 			.then((res) => res.json())
 			.then((jsonData) => {
 				this.setState({
+					...this.state,
 					cities: jsonData,
 				});
 			})
@@ -67,11 +68,17 @@ class CitiesPage extends React.Component {
 						return postObj._id !== postId;
 					});
 					this.setState({
-						post: updatedPosts,
+						...this.state,
+						posts: updatedPosts,
 					});
 				})
 				.catch((err) => console.log(err));
 		}
+	};
+	handleRerender = () => {
+		this.setState({
+			...this.state,
+		});
 	};
 
 	render() {
@@ -96,6 +103,7 @@ class CitiesPage extends React.Component {
 							city={this.state.city}
 							posts={this.state.posts}
 							deletePost={this.handleDeletePost}
+							handleRerender={this.handleRerender}
 						/>
 					</div>
 				</div>

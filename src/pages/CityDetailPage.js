@@ -34,7 +34,10 @@ class CityDetailPage extends React.Component {
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">
-					<NewPostComponent city={this.props.city} />
+					<NewPostComponent
+						city={this.props.city}
+						handleRerender={this.props.handleRerender}
+					/>
 				</div>
 			</div>
 		);
