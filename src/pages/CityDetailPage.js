@@ -1,5 +1,5 @@
 import React from 'react';
-import CityDetailCard from '../components/CityDetailCard';
+import CityDetailCard from '../components/cities/CityDetailCard';
 import NewPostComponent from '../components/postComponents/NewPostComponent';
 
 class CityDetailPage extends React.Component {

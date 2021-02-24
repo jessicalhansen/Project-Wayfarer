@@ -1,5 +1,5 @@
 import React from 'react';
-import CitiesList from '../components/CitiesList';
+import CitiesList from '../components/cities/CitiesList';
 import CityDetailPage from './CityDetailPage';
 
 class CitiesPage extends React.Component {
