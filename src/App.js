@@ -1,13 +1,13 @@
 import NavBar from './components/universalComp/NavBar';
 import Footer from './components/universalComp/Footer';
-import routes from './config/routes';
+import Routes from './config/routes';
 import './App.css';
 
 function App() {
 	return (
 		<div>
 			<NavBar />
-			<div id="app">{routes}</div>
+			<div id="app"><Routes/></div>
 			<Footer />
 		</div>
 	);

@@ -1,19 +1,56 @@
-import { Switch, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import CitiesPage from '../pages/CitiesPage';
-import NewPostComponent from '../components/postComponents/NewPostComponent';
-import Login from '../pages/Login';
-import Signup from '../pages/Signup';
+import { Switch, Route, Redirect } from "react-router-dom";
+import React from "react";
+import HomePage from "../pages/HomePage";
+import CitiesPage from "../pages/CitiesPage";
+import NewPostComponent from "../components/postComponents/NewPostComponent";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
 
+class Routes extends React.Component {
+  state = {
+    isLoggedIn: false,
+  };
 
-const routes = (
-	<Switch>
-		<Route exact path="/" component={HomePage} />
-		<Route path="/cities" component={CitiesPage} />
-		<Route path='/newposts' component={NewPostComponent} />
-		<Route path='/login' component={Login} />
-		<Route path='/signup' component={Signup} />
-	</Switch>
-);
+  updateAuth = () => {
+    this.setState({
+      isLoggedIn: true,
+    });
+  };
 
-export default routes;
+  logout = () => {
+    console.log("Logged out");
+    this.setState({
+      isLoggedIn: false,
+    });
+  };
+
+  render() {
+    return (
+			<>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/cities" component={CitiesPage} />
+
+        <Route
+          path="/newposts"
+          component={() => {
+            if (this.state.isLoggedIn) {
+              return <NewPostComponent isLoggedIn={this.state.isLoggedIn} />;
+            } else {
+              return <Redirect to="/" />
+            }
+          }}
+        />
+
+        <Route path="/login">
+          <Login updateAuth={this.updateAuth} />
+        </Route>
+
+        <Route path="/signup" component={Signup} />
+      </Switch>
+			</>
+    );
+  }
+}
+
+export default Routes;

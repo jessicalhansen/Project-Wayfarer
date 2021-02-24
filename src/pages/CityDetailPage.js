@@ -17,6 +17,10 @@ class CityDetailPage extends React.Component {
 	};
 
 	render() {
+		if(this.props.isLoggedIn === false) {
+      this.props.history.push('/');
+      return <div></div>;
+    }
 		return (
 			<div>
 				<CityDetailCard city={this.props.city} />
