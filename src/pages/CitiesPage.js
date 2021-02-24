@@ -10,7 +10,7 @@ class CitiesPage extends React.Component {
 			name: 'San-Fran',
 			state: 'Cali',
 			country: 'USA',
-			image: '',
+			image: 'https://i.imgur.com/Zq59o10.jpg',
 		},
 	};
 
@@ -31,12 +31,20 @@ class CitiesPage extends React.Component {
 
 	render() {
 		return (
-			<div className="flex justify-between h-full">
-				<div className="p-3 border-black border-2 city-comp">
-					<CitiesList cities={this.state.cities} />
+			<div className="flex h-full">
+				<div className="w-full">
+					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
+					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+						<CitiesList cities={this.state.cities} />
+					</div>
 				</div>
-				<div className="p-3 border-black border-2 city-comp">
-					<CityDetailPage city={this.state.city} />
+				<div className="w-full">
+					<h1 className="text-4xl text-gray-700">
+						The city of {this.state.city.name}
+					</h1>
+					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+						<CityDetailPage city={this.state.city} />
+					</div>
 				</div>
 			</div>
 		);
