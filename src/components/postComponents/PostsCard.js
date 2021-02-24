@@ -13,12 +13,9 @@ const PostsCard = (props) => {
 					>
 						Delete
 					</button>
+					<p>{props.post.createdAt}</p>
 					<Link to={`/editpost/${props.post._id}`}>
-					<button
-						className="btn bg-gray-700 text-gray-300"
-					>
-						Edit Post
-					</button>
+						<button className="btn bg-gray-700 text-gray-300">Edit Post</button>
 					</Link>
 				</div>
 			</div>
