@@ -19,7 +19,24 @@ class ShowPost extends React.Component {
 			image: '',
 		},
 	};
-
+	handleDeletePost = () => {
+		let confirmed = window.confirm(
+			'Are you sure you want to delete this post?'
+		);
+		if (confirmed) {
+			console.log('Fire away Sara Doe!');
+			fetch(`http://localhost:4000/api/v1/posts/${this.state.post._id}`, {
+				method: 'DELETE',
+			})
+				.then((response) => {
+					return response.json();
+				})
+				.then((jsonData) => {
+					this.props.history.push('/cities');
+				})
+				.catch((err) => console.log(err));
+		}
+	};
 	componentDidMount() {
 		fetch(`http://localhost:4000/api/v1/posts/${this.props.match.params.id}`)
 			.then((response) => {
@@ -79,12 +96,22 @@ class ShowPost extends React.Component {
 						{this.state.post.body}
 					</p>
 				</div>
-				<div>
+				<div className="flex justify-evenly">
 					<Link to={`/editpost/${this.state.post._id}`}>
-						<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
-							Edit Post
-						</button>
+						<div>
+							<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
+								Edit Post
+							</button>
+						</div>
 					</Link>
+					<div>
+						<button
+							className="btn btn-danger"
+							onClick={() => this.handleDeletePost()}
+						>
+							Delete
+						</button>
+					</div>
 				</div>
 			</div>
 		);

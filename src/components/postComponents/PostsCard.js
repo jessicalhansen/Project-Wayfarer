@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 const PostsCard = (props) => {
 	return (
 		<>
-			<Link to={`/showpost/${props.post._id}`}>
-				<div className="post-card bg-gray-300 border-black border-2 p-3  m-4 flex flex-col justify-between">
+			<div className="post-card bg-gray-300 border-black border-2 p-3  m-4 flex flex-col justify-between">
+				<Link to={`/showpost/${props.post._id}`}>
 					<h1 className="text-3xl"> {props.post.title}</h1>
 					<p className="text-"> {props.post.body}</p>
-					<div className="flex justify-between px-5">
-						<button
-							className="btn btn-danger"
-							// onClick={() => props.deletePost(props.post._id)}
-						>
-							Delete
+				</Link>
+				<div className="flex justify-between px-5">
+					<button
+						className="btn btn-danger"
+						onClick={() => props.deletePost(props.post._id)}
+					>
+						Delete
+					</button>
+					<p>{props.post.createdAt}</p>
+					<Link to={`/editpost/${props.post._id}`}>
+						<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
+							Edit Post
 						</button>
-						<p>{props.post.createdAt}</p>
-						<Link to={`/editpost/${props.post._id}`}>
-							<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
-								Edit Post
-							</button>
-						</Link>
-					</div>
+					</Link>
 				</div>
-			</Link>
+			</div>
 		</>
 	);
 };
