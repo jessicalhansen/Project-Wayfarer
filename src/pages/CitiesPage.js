@@ -6,6 +6,7 @@ class CitiesPage extends React.Component {
 	state = {
 		cities: [],
 		city: {
+			id: '60347f311e79196784a75654',
 			name: 'San-Fran',
 			state: 'Cali',
 			country: 'USA',
@@ -30,11 +31,11 @@ class CitiesPage extends React.Component {
 
 	render() {
 		return (
-			<div className="flex justify-evenly">
-				<div>
+			<div className="flex justify-between h-full">
+				<div className="p-3 border-black border-2 city-comp">
 					<CitiesList cities={this.state.cities} />
 				</div>
-				<div>
+				<div className="p-3 border-black border-2 city-comp">
 					<CityDetailPage city={this.state.city} />
 				</div>
 			</div>

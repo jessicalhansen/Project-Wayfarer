@@ -1,11 +1,20 @@
+import React from 'react';
 import CityDetailCard from '../components/CityDetailCard';
+import NewPostComponent from '../components/postComponents/NewPostComponent';
 
-const CityDetailPage = (props) => {
-	return (
-		<div>
-			<CityDetailCard city={props.city} />
-		</div>
-	);
-};
+class CityDetailPage extends React.Component {
+	state = {
+		posts: [],
+	};
+
+	render() {
+		return (
+			<div>
+				<CityDetailCard city={this.props.city} />
+				<NewPostComponent city={this.props.city} />
+			</div>
+		);
+	}
+}
 
 export default CityDetailPage;
