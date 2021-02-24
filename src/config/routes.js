@@ -43,7 +43,7 @@ class Routes extends React.Component {
           <Login updateAuth={this.updateAuth} />
         </Route>
 
-        <Route path="/signup" component={Signup} />
+        <Route path="/signup" component={Signup}></Route>
       </Switch>
 			</>
     );
