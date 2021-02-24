@@ -3,7 +3,7 @@ import Carousel from '../components/universalComp/Carousel';
 const HomePage = () => {
 	return (
 		<div id="home-container">
-			<div id="carousel-container">
+			<div id="carousel-container" >
 				<Carousel />
 			</div>
 

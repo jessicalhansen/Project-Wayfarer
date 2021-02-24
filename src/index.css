@@ -3,186 +3,186 @@
 @tailwind utilities;
 
 html {
-	font-size: 1em; /* 16 px */
+  font-size: 1em; /* 16 px */
 }
 body {
-	background-color: rgba(209, 213, 219);
-	color: rgb(0, 0, 0);
-	text-align: center;
-	width: 100vw;
-	height: 100vh;
-	font-size: 1.3em;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+  background-color: rgba(209, 213, 219);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 #app {
-	background-color: rgba(209, 213, 219);
-	min-height: 100vh;
-	padding: 1em;
+  background-color: rgba(209, 213, 219);
+  min-height: 100vh;
+  padding: 1em;
 }
 #detail {
-	min-height: 85vh;
-	max-height: 85vh;
-	box-sizing: border-box;
+  min-height: 85vh;
+  max-height: 85vh;
+  box-sizing: border-box;
 }
 #city {
-	max-height: 85vh;
-	min-height: 85vh;
-	overflow: scroll;
+  max-height: 85vh;
+  min-height: 85vh;
+  overflow: scroll;
 }
 .city-card {
-	cursor: pointer;
+  cursor: pointer;
 }
 #post {
-	max-height: 35vh;
-	overflow: scroll;
-	box-sizing: border-box;
+  max-height: 35vh;
+  overflow: scroll;
+  box-sizing: border-box;
 }
 .post-card {
-	cursor: pointer;
+  cursor: pointer;
 }
 #icon {
-	position: fixed;
-	right: 10px;
+  position: fixed;
+  right: 10px;
 }
 #footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 #post-form {
-	position: absolute;
-	border: black 5px solid;
-	border-radius: 0.5em;
-	padding: 2em;
-	width: 50%;
-	height: 50%;
-	left: 25%;
-	top: 25%;
-	-webkit-border-radius: 0.5em;
-	-moz-border-radius: 0.5em;
-	-ms-border-radius: 0.5em;
-	-o-border-radius: 0.5em;
-	display: none;
+  position: absolute;
+  border: black 5px solid;
+  border-radius: 0.5em;
+  padding: 2em;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  display: none;
 }
 #post-form-inner {
-	display: flex;
-	height: max-content;
-	flex-direction: column;
-	align-content: space-between;
-	align-items: center;
-	justify-content: space-between;
-	padding: 2em;
+  display: flex;
+  height: max-content;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
 }
 .post-card,
 .city-card {
-	border-radius: 1.5em;
-	-webkit-border-radius: 1.5em;
-	-moz-border-radius: 1.5em;
-	-ms-border-radius: 1.5em;
-	-o-border-radius: 1.5em;
+  border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
 }
 .list-img {
-	width: 100px;
+  width: 100px;
 }
 .city-comp {
-	min-width: 50%;
-	min-height: 70vh;
+  min-width: 50%;
+  min-height: 70vh;
 }
 .form {
-	align-content: space-between;
+  align-content: space-between;
 }
 .cursive {
-	font-family: Amatic SC, cursive;
-	font-weight: 700;
+  font-family: Amatic SC, cursive;
+  font-weight: 700;
 }
 .logo {
-	border-radius: 0.5em 0.5em 0 0;
-	-webkit-border-radius: 0.5em 0.5em 0 0;
-	-moz-border-radius: 0.5em 0.5em 0 0;
-	-ms-border-radius: 0.5em 0.5em 0 0;
-	-o-border-radius: 0.5em 0.5em 0 0;
+  border-radius: 0.5em 0.5em 0 0;
+  -webkit-border-radius: 0.5em 0.5em 0 0;
+  -moz-border-radius: 0.5em 0.5em 0 0;
+  -ms-border-radius: 0.5em 0.5em 0 0;
+  -o-border-radius: 0.5em 0.5em 0 0;
 }
 .link {
-	height: 100%;
-	padding: 0 2em;
-	border-radius: 0.8em 0.8em 0 0;
-	-webkit-border-radius: 0.8em 0.8em 0 0;
-	-moz-border-radius: 0.8em 0.8em 0 0;
-	-ms-border-radius: 0.8em 0.8em 0 0;
-	-o-border-radius: 0.8em 0.8em 0 0;
+  height: 100%;
+  padding: 0 2em;
+  border-radius: 0.8em 0.8em 0 0;
+  -webkit-border-radius: 0.8em 0.8em 0 0;
+  -moz-border-radius: 0.8em 0.8em 0 0;
+  -ms-border-radius: 0.8em 0.8em 0 0;
+  -o-border-radius: 0.8em 0.8em 0 0;
 }
 .active-link {
-	color: rgb(41, 40, 40) !important;
-	font-weight: bold;
+  color: rgb(41, 40, 40) !important;
+  font-weight: bold;
 }
 #home-container {
-	display: flex;
-	flex-direction: column;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 #home-item-container {
-	display: flex;
-	margin: 2em;
+  display: flex;
+  margin: 2em;
 }
 .home-item {
-	padding: 1em;
-	line-height: 1.5em;
-	border: double black 5px;
+  padding: 1em;
+  line-height: 1.5em;
+  border: double black 5px;
 }
-#slide1 {
-	background-image: url('https://i2.wp.com/handluggageonly.co.uk/wp-content/uploads/2014/09/Rio-de-Janeiro-s.jpg?w=1600&ssl=1');
-}
-#slide2 {
-	/* background-image: url('https://i2.wp.com/handluggageonly.co.uk/wp-content/uploads/2014/09/Rio-de-Janeiro-s.jpg?w=1600&ssl=1'); */
-}
-#slide3 {
-	background-image: url('https://www.wonderslist.com/wp-content/uploads/2019/05/best-places-to-visit-around-the-world.jpg');
-}
+
 /* /////////////////////////////////////////////////////// */
 /* CAROUSEL STYLING  */
 /* RESOURSE -> https://www.tailwindtoolbox.com/components/carousel  */
 /* /////////////////////////////////////////////////////// */
-
+/* #slide1 {
+	background-image: url('https://i2.wp.com/handluggageonly.co.uk/wp-content/uploads/2014/09/Rio-de-Janeiro-s.jpg?w=1600&ssl=1');
+}
+#slide2 {
+	background-image: url('https://i2.wp.com/handluggageonly.co.uk/wp-content/uploads/2014/09/Rio-de-Janeiro-s.jpg?w=1600&ssl=1');
+}
+#slide3 {
+	background-image: url('https://www.wonderslist.com/wp-content/uploads/2019/05/best-places-to-visit-around-the-world.jpg');
+} */
 .carousel-open:checked + .carousel-item {
-	position: static;
-	opacity: 100;
+  position: static;
+  opacity: 100;
 }
 .carousel-item {
-	-webkit-transition: opacity 0.6s ease-out;
-	transition: opacity 0.6s ease-out;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 #carousel-1:checked ~ .control-1,
 #carousel-2:checked ~ .control-2,
 #carousel-3:checked ~ .control-3 {
-	display: block;
+  display: block;
 }
 .carousel-indicators {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	bottom: 2%;
-	left: 0;
-	right: 0;
-	text-align: center;
-	z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
 }
 #carousel-1:checked
-	~ .control-1
-	~ .carousel-indicators
-	li:nth-child(1)
-	.carousel-bullet,
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
 #carousel-2:checked
-	~ .control-2
-	~ .carousel-indicators
-	li:nth-child(2)
-	.carousel-bullet,
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
 #carousel-3:checked
-	~ .control-3
-	~ .carousel-indicators
-	li:nth-child(3)
-	.carousel-bullet {
-	color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+  color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
 }
