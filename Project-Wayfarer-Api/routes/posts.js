@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controllers = require('../controllers');
 
 // Post Index
-router.get('/', controllers.posts.index);
+router.get('/filter/:cityId', controllers.posts.index);
 
 // Post Show
 router.get('/:id', controllers.posts.show);

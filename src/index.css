@@ -15,12 +15,18 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	overflow: hidden;
 }
 #app {
 	background-color: rgba(209, 213, 219);
 	min-height: 100vh;
 	padding: 1em;
+	overflow: hidden;
+}
+#city {
+	overflow: scroll;
+}
+#post {
+	overflow: scroll;
 }
 #icon {
 	position: fixed;
@@ -54,6 +60,14 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 2em;
+}
+.post-card,
+.city-card {
+	border-radius: 1.5em;
+	-webkit-border-radius: 1.5em;
+	-moz-border-radius: 1.5em;
+	-ms-border-radius: 1.5em;
+	-o-border-radius: 1.5em;
 }
 .list-img {
 	width: 100px;

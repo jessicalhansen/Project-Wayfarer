@@ -1,6 +1,7 @@
 import React from 'react';
 import CityDetailCard from '../components/cities/CityDetailCard';
 import NewPostComponent from '../components/postComponents/NewPostComponent';
+import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
 	state = {
@@ -15,7 +16,20 @@ class CityDetailPage extends React.Component {
 			form.style.display = 'none';
 		}
 	};
-
+	componentDidMount() {
+		fetch(`http://localhost:4000/api/v1/posts/filter/${this.props.city.id}`)
+			.then((res) => res.json())
+			.then((jsonData) => {
+				this.setState({
+					posts: jsonData,
+				});
+			})
+			.catch((err) => {
+				console.log('====================================');
+				console.log(err);
+				console.log('====================================');
+			});
+	}
 	render() {
 		return (
 			<div>
@@ -30,11 +44,7 @@ class CityDetailPage extends React.Component {
 				</div>
 				<div id="post-feed">
 					<div className="bg-gray-300 border-black border-2 rounded">
-						<h1>Title: Im not sure</h1>
-						<p>
-							Body : Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Est, sint.
-						</p>
+						<PostsList posts={this.state.posts} />
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">

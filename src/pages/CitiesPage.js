@@ -41,7 +41,10 @@ class CitiesPage extends React.Component {
 			<div className="flex h-full">
 				<div className="w-full">
 					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
-					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+					<div
+						id="city"
+						className="p-3 border-black border-2 city-comp bg-gray-700"
+					>
 						<CitiesList
 							cities={this.state.cities}
 							showCityHandler={this.showCityHandler}
@@ -52,7 +55,10 @@ class CitiesPage extends React.Component {
 					<h1 className="text-4xl text-gray-700">
 						The city of {this.state.city.name}
 					</h1>
-					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+					<div
+						id="post"
+						className="p-3 border-black border-2 city-comp bg-gray-700"
+					>
 						<CityDetailPage city={this.state.city} />
 					</div>
 				</div>
