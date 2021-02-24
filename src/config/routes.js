@@ -2,13 +2,12 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import React from "react";
 import HomePage from "../pages/HomePage";
 import CitiesPage from "../pages/CitiesPage";
-import NewPostComponent from "../components/postComponents/NewPostComponent";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 
 class Routes extends React.Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: true,
   };
 
   updateAuth = () => {
@@ -29,13 +28,11 @@ class Routes extends React.Component {
 			<>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/cities" component={CitiesPage} />
-
         <Route
-          path="/newposts"
+          path="/cities"
           component={() => {
             if (this.state.isLoggedIn) {
-              return <NewPostComponent isLoggedIn={this.state.isLoggedIn} />;
+              return	<CitiesPage isLoggedIn={this.state.isLoggedIn} />;
             } else {
               return <Redirect to="/" />
             }
