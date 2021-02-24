@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const PostsCard = (props) => {
 	return (
 		<>
@@ -11,13 +13,14 @@ const PostsCard = (props) => {
 					>
 						Delete
 					</button>
-					<p>{Date(props.post.createdAt)}</p>
+					<Link to={`/editpost/${props.post._id}`}>
 					<button
 						className="btn bg-gray-700 text-gray-300"
 						// onClick={() => props.updatePost(props.post._id)}
 					>
 						Update
 					</button>
+					</Link>
 				</div>
 			</div>
 		</>
