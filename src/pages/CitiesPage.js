@@ -13,6 +13,7 @@ class CitiesPage extends React.Component {
 			country: 'USA',
 			image: 'https://i.imgur.com/Zq59o10.jpg',
 		},
+		posts: [],
 	};
 
 	componentDidMount() {
@@ -31,9 +32,19 @@ class CitiesPage extends React.Component {
 	}
 
 	showCityHandler = (data) => {
-		this.setState({
-			city: data,
-		});
+		fetch(`http://localhost:4000/api/v1/posts/filter/${data.id}`)
+			.then((res) => res.json())
+			.then((jsonData) => {
+				this.setState({
+					city: data,
+					posts: jsonData,
+				});
+			})
+			.catch((err) => {
+				console.log('====================================');
+				console.log(err);
+				console.log('====================================');
+			});
 	};
 
 	render() {
@@ -59,7 +70,7 @@ class CitiesPage extends React.Component {
 						id="post"
 						className="p-3 border-black border-2 city-comp bg-gray-700"
 					>
-						<CityDetailPage city={this.state.city} />
+						<CityDetailPage city={this.state.city} posts={this.state.posts} />
 					</div>
 				</div>
 			</div>

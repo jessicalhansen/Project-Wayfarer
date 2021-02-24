@@ -4,10 +4,6 @@ import NewPostComponent from '../components/postComponents/NewPostComponent';
 import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
-	state = {
-		posts: [],
-	};
-
 	showForm = () => {
 		const form = document.getElementById('post-form');
 		if (form.style.display === 'none') {
@@ -16,20 +12,6 @@ class CityDetailPage extends React.Component {
 			form.style.display = 'none';
 		}
 	};
-	componentDidMount() {
-		fetch(`http://localhost:4000/api/v1/posts/filter/${this.props.city.id}`)
-			.then((res) => res.json())
-			.then((jsonData) => {
-				this.setState({
-					posts: jsonData,
-				});
-			})
-			.catch((err) => {
-				console.log('====================================');
-				console.log(err);
-				console.log('====================================');
-			});
-	}
 	render() {
 		return (
 			<div>
@@ -44,7 +26,7 @@ class CityDetailPage extends React.Component {
 				</div>
 				<div id="post-feed">
 					<div className="bg-gray-300 border-black border-2 rounded">
-						<PostsList posts={this.state.posts} />
+						<PostsList posts={this.props.posts} />
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">
