@@ -4,6 +4,7 @@ import CityDetailPage from './CityDetailPage';
 
 class CitiesPage extends React.Component {
 	state = {
+		isLoggedIn: this.props.isLoggedIn,
 		cities: [],
 		city: {
 			id: '60347f311e79196784a75654',
@@ -29,13 +30,19 @@ class CitiesPage extends React.Component {
 			});
 	}
 
+	showCityHandler = (data) => {
+		this.setState({
+			city: data
+		})
+	}
+
 	render() {
 		return (
 			<div className="flex h-full">
 				<div className="w-full">
 					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
 					<div className="p-3 border-black border-2 city-comp bg-gray-700">
-						<CitiesList cities={this.state.cities} />
+						<CitiesList cities={this.state.cities} showCityHandler={this.showCityHandler}/>
 					</div>
 				</div>
 				<div className="w-full">
