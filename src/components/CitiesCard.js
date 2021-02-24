@@ -22,7 +22,7 @@ const CitiesCard = (props) => {
 				src={props.cities.image}
 				alt={props.cities.name + ' Image'}
 			/>
-			<p className="text-5xl mr-8 mt-2"> {props.cities.name}</p>
+			<p className="text-4xl mr-6 mt-2"> {props.cities.name}</p>
 		</div>
 	);
 };

@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage";
 import CitiesPage from "../pages/CitiesPage";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import EditPost from "../components/postComponents/EditPostComponent";
 
 class Routes extends React.Component {
   state = {
@@ -38,6 +39,7 @@ class Routes extends React.Component {
             }
           }}
         />
+        <Route path='/editpost/:id' component={EditPost} /> 
 
         <Route path="/login">
           <Login updateAuth={this.updateAuth} />

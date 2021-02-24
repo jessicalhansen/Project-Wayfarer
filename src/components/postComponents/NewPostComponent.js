@@ -15,7 +15,7 @@ class NewPost extends React.Component {
 
 	handleSubmitPost = (event) => {
 		event.preventDefault();
-		const fuckinObj = {
+		const cityObj = {
 			title: this.state.title,
 			body: this.state.body,
 			userId: this.props.city.id,
@@ -26,7 +26,7 @@ class NewPost extends React.Component {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(fuckinObj),
+			body: JSON.stringify(cityObj),
 		})
 			.then((result) => result.json())
 			.then((data) => data)
