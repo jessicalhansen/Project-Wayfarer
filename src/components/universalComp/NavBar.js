@@ -41,7 +41,7 @@ export default function NavBar() {
 						activeClassName="text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>
-						Sign-up
+						Sign-Up
 					</NavLink>
 				</nav>
 				<div id="icon" className="inline-flex py-3 px-3 my-6">
