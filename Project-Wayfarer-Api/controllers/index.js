@@ -1,4 +1,4 @@
 module.exports = {
 	cities: require('./citiesController.js'),
-	posts: require('./postsController.js'),
+	posts: require('./postsController'),
 };
