@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PostsCard = (props) => {
@@ -9,7 +10,7 @@ const PostsCard = (props) => {
 				<div className="flex justify-between px-5">
 					<button
 						className="btn btn-danger"
-						// onClick={() => props.deletePost(props.post._id)}
+						onClick={() => props.deletePost(props.post._id)}
 					>
 						Delete
 					</button>
