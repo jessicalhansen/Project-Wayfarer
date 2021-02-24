@@ -13,7 +13,6 @@ class CityDetailPage extends React.Component {
 		}
 	};
 
-
 	render() {
 		return (
 			<div id="detail">
@@ -27,10 +26,11 @@ class CityDetailPage extends React.Component {
 					</button>
 				</div>
 				<div id="post-feed">
-
-					<div className="bg-gray-300 border-black border-2 rounded">
-						<PostsList posts={this.props.posts} deletePost={this.props.deletePost}/>
-
+					<div id="post" className="bg-gray-300 border-black border-2 rounded">
+						<PostsList
+							posts={this.props.posts}
+							deletePost={this.props.deletePost}
+						/>
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">

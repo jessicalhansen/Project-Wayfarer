@@ -5,8 +5,10 @@ const PostsCard = (props) => {
 	return (
 		<>
 			<div className="post-card bg-gray-300 border-black border-2 p-3  m-4 flex flex-col justify-between">
-				<h1 className="text-3xl"> {props.post.title}</h1>
-				<p className="text-"> {props.post.body}</p>
+				<Link to={`/showpost/${props.post._id}`}>
+					<h1 className="text-3xl"> {props.post.title}</h1>
+					<p className="text-"> {props.post.body}</p>
+				</Link>
 				<div className="flex justify-between px-5">
 					<button
 						className="btn btn-danger"

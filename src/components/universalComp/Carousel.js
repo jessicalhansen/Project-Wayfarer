@@ -5,7 +5,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 export default class ImgCarousel extends React.Component {
 	render() {
 		return (
-			<div className="carousel" height="50vh">
+			<div className="carousel">
 				<Carousel arrows infinite >
 					<img src="https://i.imgur.com/GEK2phv.jpg" alt="" />
 					<img src="https://i.imgur.com/DnWDPMU.jpg" alt="" />
