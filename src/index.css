@@ -31,6 +31,22 @@ body {
 	bottom: 0;
 	width: 100%;
 }
+#post-form {
+	position: absolute;
+	border: black 5px solid;
+	border-radius: 0.5em;
+	padding: 2em;
+	left: 35%;
+	background-color: antiquewhite;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	display: none;
+}
+.form {
+	align-content: space-between;
+}
 .cursive {
 	font-family: Amatic SC, cursive;
 	font-weight: 700;
