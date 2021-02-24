@@ -16,9 +16,8 @@ const PostsCard = (props) => {
 					<Link to={`/editpost/${props.post._id}`}>
 					<button
 						className="btn bg-gray-700 text-gray-300"
-						// onClick={() => props.updatePost(props.post._id)}
 					>
-						Update
+						Edit Post
 					</button>
 					</Link>
 				</div>

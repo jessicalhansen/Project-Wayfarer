@@ -44,7 +44,7 @@ class EditPost extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmitPost}>
           <div>
             <label htmlFor="title">Title</label>
             <br />
