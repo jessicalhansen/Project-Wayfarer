@@ -12,6 +12,8 @@ class CityDetailPage extends React.Component {
 			form.style.display = 'none';
 		}
 	};
+
+
 	render() {
 		return (
 			<div>
@@ -26,7 +28,7 @@ class CityDetailPage extends React.Component {
 				</div>
 				<div id="post-feed">
 					<div className="bg-gray-300 border-black border-2 rounded">
-						<PostsList posts={this.props.posts} />
+						<PostsList posts={this.props.posts} deletePost={this.props.deletePost}/>
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">

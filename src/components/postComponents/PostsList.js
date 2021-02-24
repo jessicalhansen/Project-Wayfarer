@@ -7,8 +7,7 @@ const PostsList = (props) => {
 			<PostsCard
 				key={postsObj._id}
 				post={postsObj}
-				// updatePost={props.updatePost}
-				// deletePost={props.deletePost}
+				deletePost={props.deletePost}
 			/>
 		);
 	});
