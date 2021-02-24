@@ -4,8 +4,8 @@ class NewPost extends React.Component {
 	state = {
 		title: '',
 		body: '',
-		userId: this.props.city.id,
-		cityId: this.props.city.id,
+		userId: '',
+		cityId: '',
 	};
 
 	handleNewPost = (event) => {
@@ -17,6 +17,11 @@ class NewPost extends React.Component {
 
 	handleSubmitPost = (event) => {
 		event.preventDefault();
+		this.setState({
+			...this.state,
+			userId: this.props.city.id,
+			cityId: this.props.city.id,
+		});
 		fetch('http://localhost:4000/api/v1/posts', {
 			method: 'POST',
 			headers: {
@@ -25,25 +30,15 @@ class NewPost extends React.Component {
 			body: JSON.stringify(this.state),
 		})
 			.then((result) => result.json())
-			.then((jsonData) => {
-				console.log('im here');
-				this.setState({
-					post: {
-						userId: '0',
-						cityId: this.props.city.id,
-						title: '',
-						body: '',
-					},
-				});
-				this.props.history.push('/cities');
-				console.log(this.state);
-			})
+			.then((data) => data)
 			.catch((err) => {
 				console.log(err);
 			});
 
-		const form = document.getElementById('post-form');
-		form.style.display = 'none';
+		this.setState({ title: '', body: '', userId: '', cityId: '' });
+		document.getElementById('post-form').style.display = 'none';
+		document.getElementById('title').value = '';
+		document.getElementById('body').value = '';
 	};
 
 	render() {

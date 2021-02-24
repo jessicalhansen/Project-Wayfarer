@@ -32,9 +32,9 @@ class CitiesPage extends React.Component {
 
 	showCityHandler = (data) => {
 		this.setState({
-			city: data
-		})
-	}
+			city: data,
+		});
+	};
 
 	render() {
 		return (
@@ -42,7 +42,10 @@ class CitiesPage extends React.Component {
 				<div className="w-full">
 					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
 					<div className="p-3 border-black border-2 city-comp bg-gray-700">
-						<CitiesList cities={this.state.cities} showCityHandler={this.showCityHandler}/>
+						<CitiesList
+							cities={this.state.cities}
+							showCityHandler={this.showCityHandler}
+						/>
 					</div>
 				</div>
 				<div className="w-full">
