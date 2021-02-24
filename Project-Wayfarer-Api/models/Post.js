@@ -6,8 +6,13 @@ const postSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 			trim: true,
+			min: 1,
+			max: 200,
 		},
-		body: String,
+		body: {
+			type: String,
+			required: true
+		},
 		userId: mongoose.Schema.ObjectId,
 		cityId: mongoose.Schema.ObjectId,
 	},
