@@ -51,10 +51,7 @@ class NewPost extends React.Component {
 			<div className="text-center">
 				<h1 className="text-3xl my-2">New Post</h1>
 				<div>
-					<form
-						onSubmit={this.handleSubmitPost}
-						className="flex flex-col align-evenly form"
-					>
+					<form id="post-form-inner" onSubmit={this.handleSubmitPost}>
 						<div>{/* This is where the dropdown goes for cities */}</div>
 						<div>
 							<label className="form-label" htmlFor="title">
@@ -80,7 +77,7 @@ class NewPost extends React.Component {
 								onChange={this.handleNewPost}
 							/>
 						</div>
-						<div>
+						<div className="my-4">
 							<button
 								type="submit"
 								className="btn bg-gray-700 text-white center"
