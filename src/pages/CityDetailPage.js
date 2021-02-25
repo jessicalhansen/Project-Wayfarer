@@ -12,13 +12,15 @@ class CityDetailPage extends React.Component {
 			} else {
 				form.style.display = 'none';
 			}
-		}
+		};
 	};
 
 	render() {
 		return (
 			<div id="detail">
-				<CityDetailCard city={this.props.city} />
+				<div id="detail-card">
+					<CityDetailCard city={this.props.city} />
+				</div>
 				<div className="text-right my-4 mx-3">
 					<button
 						onClick={this.showForm}
