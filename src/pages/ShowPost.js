@@ -164,7 +164,7 @@ class ShowPost extends React.Component {
 										name="body"
 										className="m-2"
 									/>
-									<input type="submit" className="btn btn-primary hover:bg-green-600 m-1" />
+									<input type="submit" className="btn btn-primary hover:bg-green-600 m-2" />
 								</div>
 							</form>
 						</div>
