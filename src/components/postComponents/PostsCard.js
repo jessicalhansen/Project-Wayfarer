@@ -10,15 +10,12 @@ const PostsCard = (props) => {
 					<p className="text-sm"> {props.post.body}</p>
 				</Link>
 				<div className="flex justify-between px-5">
-					<button
-						className="btn btn-danger hover:bg-blue-500"
-						onClick={() => props.deletePost(props.post._id)}
-					>
+					<button className="btn btn-danger hover:bg-green-600" onClick={() => props.deletePost(props.post._id)} >
 						Delete
 					</button>
 					<p>{props.post.createdAt}</p>
 					<Link to={`/editpost/${props.post._id}`}>
-						<button className="btn bg-gray-700 text-gray-300 hover:bg-blue-500">
+						<button className="btn bg-gray-700 text-gray-300 hover:bg-green-600">
 							Edit Post
 						</button>
 					</Link>
