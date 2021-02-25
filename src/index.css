@@ -87,6 +87,7 @@ body {
 }
 #comment-list {
 	min-height: 50vh;
+	max-height: 50vh;
 	overflow: scroll;
 }
 #comment-img {
@@ -109,9 +110,11 @@ body {
 	min-width: 50%;
 	min-height: 70vh;
 }
+
 .form {
 	align-content: space-between;
 }
+
 .cursive {
 	font-family: Amatic SC, cursive;
 	font-weight: 700;
