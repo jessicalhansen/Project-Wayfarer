@@ -119,6 +119,7 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
+
 				<div className="w-64 mx-auto">
 					<img src={this.state.city.image} alt="cityImage" />
 				</div>
@@ -164,6 +165,7 @@ class ShowPost extends React.Component {
 						handleDelete={this.handleDelete}
 					/>
 				</section>
+
 			</div>
 		);
 	}
