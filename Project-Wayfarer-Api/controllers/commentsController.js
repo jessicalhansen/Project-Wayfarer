@@ -2,7 +2,7 @@ const db = require('../models');
 
 const index = (req, res) => {
 	// Query DB for all Posts
-	db.Comment.find({ cityId: req.params.commentId }, (err, allComments) => {
+	db.Comment.find({ postId: req.params.postId }, (err, allComments) => {
 		if (err) return console.log(err);
 		// Send back data as JSON object
 		return res.json(allComments);
