@@ -22,22 +22,21 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="flex justify-center content-center">
         <form onSubmit={this.loginHandler}>
-        <div>
+          <div>
             <label className="form-label" htmlFor="name">Username</label>
-            <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler}/>
+            <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler} />
           </div>
           <div>
-            <label className="form-label" htmlFor="email">Password</label>
-            <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler}/>
+            <label className="form-label mt-2" htmlFor="email">Password</label>
+            <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler} />
           </div>
-          <button type="submit" className="btn btn-primary block">Login</button>
+          <button type="submit" className="btn btn-primar m-3">Login</button>
         </form>
       </div>
     );
-
   }
-}
+};
 
 export default Login;
