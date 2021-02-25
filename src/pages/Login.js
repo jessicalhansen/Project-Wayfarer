@@ -37,7 +37,7 @@ class Login extends React.Component {
 						/>
 					</div>
 					<div>
-						<label className="form-label" htmlFor="email">
+						<label className="form-label mt-2" htmlFor="email">
 							Password
 						</label>
 						<input
@@ -49,7 +49,7 @@ class Login extends React.Component {
 							onChange={this.inputChangeHandler}
 						/>
 					</div>
-					<button type="submit" className="btn btn-primary m-3">
+					<button type="submit" className="btn btn-primar m-3">
 						Login
 					</button>
 				</form>

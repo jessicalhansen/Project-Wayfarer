@@ -18,14 +18,14 @@ const CitiesCard = (props) => {
 			<div
 				onClick={displayCity}
 				key={props.cities._id}
-				className="city-card bg-gray-300 border-black border-2 p-3 m-4 flex justify-between"
+				className="city-card bg-gray-300 border-black border-2 p-2 m-1 flex justify-between"
 			>
 				<img
-					className="list-img"
+					className="list-img pl-8"
 					src={props.cities.image}
 					alt={props.cities.name + ' Image'}
 				/>
-				<p className="text-4xl mr-6 mt-2"> {props.cities.name}</p>
+				<p className="text-2xl mr-6 m-2"> {props.cities.name}</p>
 			</div>
 		</Link>
 	);

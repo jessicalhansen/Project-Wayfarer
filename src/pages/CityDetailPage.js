@@ -1,16 +1,18 @@
 import React from 'react';
-import CityDetailCard from '../components/CityDetailCard';
+import CityDetailCard from '../components/cities/CityDetailCard';
 import NewPostComponent from '../components/postComponents/NewPostComponent';
 import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
-	showForm = () => {
+	showForm = (event) => {
 		const form = document.getElementById('post-form');
-		if (form.style.display === 'none') {
-			form.style.display = 'block';
-		} else {
-			form.style.display = 'none';
-		}
+		window.onclick = () => {
+			if (form.style.display === 'none') {
+				form.style.display = 'block';
+			} else {
+				form.style.display = 'none';
+			}
+		};
 	};
 
 	render() {

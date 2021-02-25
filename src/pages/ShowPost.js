@@ -19,6 +19,7 @@ class ShowPost extends React.Component {
 			image: '',
 		},
 	};
+
 	handleDeletePost = () => {
 		let confirmed = window.confirm(
 			'Are you sure you want to delete this post?'
@@ -37,6 +38,7 @@ class ShowPost extends React.Component {
 				.catch((err) => console.log(err));
 		}
 	};
+
 	componentDidMount() {
 		fetch(`http://localhost:4000/api/v1/posts/${this.props.match.params.id}`)
 			.then((response) => {

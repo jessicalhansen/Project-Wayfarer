@@ -1,5 +1,5 @@
 import React from 'react';
-import CitiesList from '../components/CitiesList';
+import CitiesList from '../components/cities/CitiesList';
 import CityDetailPage from './CityDetailPage';
 
 class CitiesPage extends React.Component {
@@ -95,8 +95,8 @@ class CitiesPage extends React.Component {
 		return (
 			<div className="flex h-full">
 				<div className="w-full">
-					<h1 className="text-4xl text-gray-700">Cities of the World</h1>
 					<div className="p-3 border-black border-2 city-comp bg-gray-800">
+						<h1 className="text-2xl text-white">Cities of the World</h1>
 						<CitiesList
 							cities={this.state.cities}
 							showCityHandler={this.showCityHandler}
@@ -104,10 +104,8 @@ class CitiesPage extends React.Component {
 					</div>
 				</div>
 				<div className="w-full">
-					<h1 className="text-4xl text-gray-700">
-						The city of {this.state.city.name}
-					</h1>
 					<div className="p-3 border-black border-2 city-comp bg-gray-700">
+					<h1 className="text-2xl text-white mb-2">The City of {this.state.city.name}</h1>
 						<CityDetailPage
 							city={this.state.city}
 							posts={this.state.posts}
