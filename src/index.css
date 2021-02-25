@@ -172,4 +172,7 @@ body {
   background: url('https://i.imgur.com/8sv58bi.jpg');
   background-repeat: none;
   background-size: cover;
+
+.text-right {
+  cursor: pointer;
 }

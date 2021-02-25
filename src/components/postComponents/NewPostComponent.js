@@ -4,6 +4,7 @@ class NewPost extends React.Component {
 	state = {
 		title: '',
 		body: '',
+		isOpen: false
 	};
 
 	handleNewPost = (event) => {
@@ -41,9 +42,25 @@ class NewPost extends React.Component {
 		this.props.handleRerender(cityObj.cityId);
 	};
 
+	closeModal = () => {
+		const form = document.getElementById('post-form');
+		if (!this.state.isOpen) {
+			this.setState({
+				isOpen: true
+			})
+			form.style.display = 'block'
+		} else {
+			this.setState({
+				isOpen: false
+			})
+			form.style.display = 'none'
+		}
+	};
+
 	render() {
 		return (
 			<div className="text-center">
+				<p onClick={this.closeModal} className="text-right">X</p>
 				<h1 className="text-3xl my-2">New Post</h1>
 				<div>
 					<form
