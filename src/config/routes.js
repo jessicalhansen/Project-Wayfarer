@@ -40,6 +40,21 @@ class Routes extends React.Component {
 							}
 						}}
 					/>
+					<Route
+						path="/cities/:id"
+						component={() => {
+							if (this.state.isLoggedIn) {
+								return (
+									<CitiesPage
+										isLoggedIn={this.state.isLoggedIn}
+										cityId={this.state.match.params.id}
+									/>
+								);
+							} else {
+								return <Redirect to="/" />;
+							}
+						}}
+					/>
 					<Route path="/editpost/:id" component={EditPost} />
 					<Route path="/showpost/:id" component={ShowPost} />
 
