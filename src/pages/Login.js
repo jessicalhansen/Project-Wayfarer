@@ -23,9 +23,9 @@ class Login extends React.Component {
 		return (
 			<div className="h-screen login bg-cover">
 			<div className="container mx-auto h-full flex flex-1 justify-center">
-				<div className="w-full max-w-lg items-center">
+				<div className="w-full max-w-lg">
 					<div className="leading-loose ml-10">
-						<form className="login-form max-w-sm m-4 p-10 rounded" onSubmit={this.loginHandler}>
+						<form className="loginform max-w-sm m-4 p-10 rounded" onSubmit={this.loginHandler}>
 							<p className="text-white font-medium text-center text-lg font-bold mb-3">LOGIN</p>
 								<div className="">
 									<label htmlFor="name" className="block text-sm text-white">
