@@ -22,20 +22,21 @@ body {
   padding: 0.5em;
 }
 #detail {
-  max-height: 75vh;
-  min-height: 75vh;
+  max-height: 80vh;
+  min-height: 80vh;
   box-sizing: border-box;
+  overflow: scroll;
 }
 #city {
-  max-height: 75vh;
-  min-height: 75vh;
+  max-height: 80vh;
+  min-height: 80vh;
+  box-sizing: border-box;
   overflow: scroll;
 }
 #post {
-	min-height: 35vh;
-	max-height: 35vh;
-	overflow: scroll;
-	box-sizing: border-box;
+  min-height: 35vh;
+  max-height: 35vh;
+  /* box-sizing: border-box; */
 }
 #icon {
   position: fixed;
@@ -72,7 +73,7 @@ body {
 }
 #show-post {
   min-height: 80vh;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow: scroll;
 }
 .post-card,
