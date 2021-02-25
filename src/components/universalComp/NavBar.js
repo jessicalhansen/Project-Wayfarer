@@ -7,10 +7,10 @@ export default function NavBar() {
 		<header className="bg-gray-800">
 			<div className="container mx-auto flex justify-evenly">
 				<NavLink
-					to=""
 					exact
+					to="/"
 					activeClassName="active-link text-gray-800 bg-gray-300"
-					className="logo inline-flex items-center py-7 px-3 mx-20 text-white hover:text-green-700 text-5xl font-bold cursive tracking-widest"
+					className="logo inline-flex py-3 px-3 mx-5 text-white hover:text-green-700 text-2xl font-bold cursive tracking-widest"
 				>
 					Project Wayfarer
 				</NavLink>
@@ -44,7 +44,7 @@ export default function NavBar() {
 						Sign-Up
 					</NavLink>
 				</nav>
-				<div id="icon" className="inline-flex py-3 px-3 my-6">
+				<div id="icon" className="inline-flex py-3 px-3">
 					<SocialIcon
 						url="https://git.generalassemb.ly/jessicalh/Project-Wayfarer/tree/master"
 						className="mr-4"
