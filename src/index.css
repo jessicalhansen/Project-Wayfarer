@@ -101,9 +101,9 @@ body {
   min-width: 50%;
   min-height: 70vh;
 }
-.form {
+/* .form {
   align-content: space-between;
-}
+} */
 .cursive {
   font-family: Amatic SC, cursive;
   font-weight: 700;
@@ -144,4 +144,15 @@ body {
 }
 .carousel img {
   height: 35vh;
+}
+.login {
+  background: url('http://bit.ly/2gPLxZ4');
+  background-repeat: none;
+  background-size: cover;
+}
+.leading-loose {
+  margin-top: 15vh;
+}
+.login-form {
+  border: 8px solid rgba(209, 213, 219);
 }
