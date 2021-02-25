@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controllers = require('../controllers');
 
 // Comment Index
-router.get('/filter/:commentId', controllers.comments.index);
+router.get('/filter/:postId', controllers.comments.index);
 
 // Comment Show
 router.get('/:id', controllers.comments.show);

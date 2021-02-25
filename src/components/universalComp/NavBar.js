@@ -23,7 +23,7 @@ export default function NavBar() {
 						Cities
 					</NavLink>
 					<NavLink
-						to="about"
+						to="/about"
 						activeClassName="active-link text-gray-800 bg-gray-300"
 						className="link inline-flex items-center text-white hover:text-green-700"
 					>

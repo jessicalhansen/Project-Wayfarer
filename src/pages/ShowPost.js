@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentsList from '../components/commentsComp/CommentsList';
 import { Link } from 'react-router-dom';
 
 class ShowPost extends React.Component {
@@ -18,6 +19,7 @@ class ShowPost extends React.Component {
 			country: '',
 			image: '',
 		},
+		comments: [],
 	};
 
 	handleDeletePost = () => {
@@ -58,7 +60,19 @@ class ShowPost extends React.Component {
 							...this.state,
 							city: jsonData,
 						});
-						console.log(this.state.city);
+						fetch(
+							`http://localhost:4000/api/v1/comments/filter/${this.state.post.cityId}`
+						)
+							.then((response) => {
+								return response.json();
+							})
+							.then((jsonData) => {
+								this.setState({
+									...this.state,
+									comments: jsonData || [],
+								});
+							})
+							.catch((err) => console.log(err));
 					})
 					.catch((err) => console.log(err));
 			})
@@ -115,6 +129,9 @@ class ShowPost extends React.Component {
 						</button>
 					</div>
 				</div>
+				<section id="comments-feed">
+					<CommentsList comments={this.state.comments} />
+				</section>
 			</div>
 		);
 	}
