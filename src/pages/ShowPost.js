@@ -23,6 +23,21 @@ class ShowPost extends React.Component {
 		comments: [],
 		body: '',
 	};
+	handleCommentFetch = () => {
+		return fetch(
+			`http://localhost:4000/api/v1/comments/filter/${this.state.post._id}`
+		)
+			.then((response) => {
+				return response.json();
+			})
+			.then((jsonData) => {
+				this.setState({
+					...this.state,
+					comments: jsonData,
+				});
+			})
+			.catch((err) => console.log(err));
+	};
 	componentDidMount() {
 		fetch(`http://localhost:4000/api/v1/posts/${this.props.match.params.id}`)
 			.then((response) => {
@@ -48,22 +63,6 @@ class ShowPost extends React.Component {
 			})
 			.catch((err) => console.log(err));
 	}
-	handleCommentFetch = () => {
-		return fetch(
-			`http://localhost:4000/api/v1/comments/filter/${this.state.post._id}`
-		)
-			.then((response) => {
-				return response.json();
-			})
-			.then((jsonData) => {
-				console.log(jsonData);
-				this.setState({
-					...this.state,
-					comments: jsonData,
-				});
-			})
-			.catch((err) => console.log(err));
-	};
 	handleComment = (event) => {
 		this.setState({
 			...this.state,
@@ -84,13 +83,13 @@ class ShowPost extends React.Component {
 			},
 			body: JSON.stringify(commentObj),
 		})
-			.then((result) => result.json())
-			.then((data) => data)
+			.then((data) => {
+				this.handleCommentFetch();
+				document.getElementById('comment').value = '';
+			})
 			.catch((err) => {
 				console.log(err);
 			});
-		this.handleCommentFetch();
-		document.getElementById('comment').value = '';
 	};
 
 	handleDelete = (props) => {
@@ -98,13 +97,9 @@ class ShowPost extends React.Component {
 			'Are you sure you want to delete this post?'
 		);
 		if (confirmed) {
-			console.log('Fire away Sara Doe!');
 			fetch(`http://localhost:4000/api/v1/comments/${props}`, {
 				method: 'DELETE',
 			})
-				.then((response) => {
-					return response.json();
-				})
 				.then((jsonData) => {
 					this.handleCommentFetch();
 				})
@@ -119,7 +114,7 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
-				<div className="w-64 mx-auto">
+				<div id="comment-img">
 					<img src={this.state.city.image} alt="cityImage" />
 				</div>
 				<div>
@@ -129,7 +124,7 @@ class ShowPost extends React.Component {
 					>
 						Title:
 					</label>
-					<h1 className="text-left p-3 text-3xl" id="title">
+					<h1 className="p-3 text-3xl" id="title">
 						{this.state.post.title}
 					</h1>
 				</div>
