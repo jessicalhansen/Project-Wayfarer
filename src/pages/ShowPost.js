@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentsList from '../components/commentsComp/CommentsList';
-// import { Link } from 'react-router-dom';
 
 class ShowPost extends React.Component {
 	state = {
@@ -93,6 +92,7 @@ class ShowPost extends React.Component {
 		this.handleCommentFetch();
 		document.getElementById('comment').value = '';
 	};
+
 	handleDelete = (props) => {
 		let confirmed = window.confirm(
 			'Are you sure you want to delete this post?'
@@ -119,7 +119,6 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
-
 				<div className="w-64 mx-auto">
 					<img src={this.state.city.image} alt="cityImage" />
 				</div>
@@ -165,7 +164,6 @@ class ShowPost extends React.Component {
 						handleDelete={this.handleDelete}
 					/>
 				</section>
-
 			</div>
 		);
 	}
