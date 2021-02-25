@@ -4,7 +4,11 @@ const CommentsList = (props) => {
 	const filteredList = [];
 
 	if (!props.comments.length) {
-		return <div>No Comments ..</div>;
+		return (
+			<div id="comment-list" className="bg-gray-800">
+				<p className="text-white mt-4">No Comments ..</p>
+			</div>
+		);
 	} else {
 		props.comments.map((comment) => {
 			return filteredList.unshift(
