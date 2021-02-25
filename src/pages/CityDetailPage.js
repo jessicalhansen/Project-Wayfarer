@@ -4,7 +4,7 @@ import NewPostComponent from '../components/postComponents/NewPostComponent';
 import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
-	showForm = (event) => {
+	showForm = () => {
 		const form = document.getElementById('post-form');
 		window.onclick = () => {
 			if (form.style.display === 'none') {
