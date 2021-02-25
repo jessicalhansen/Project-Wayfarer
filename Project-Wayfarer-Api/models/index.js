@@ -15,4 +15,5 @@ mongoose
 module.exports = {
 	City: require('./City'),
 	Post: require('./Post'),
+	Comment: require('./Comment'),
 };

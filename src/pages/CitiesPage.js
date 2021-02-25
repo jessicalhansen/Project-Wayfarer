@@ -105,7 +105,9 @@ class CitiesPage extends React.Component {
 				</div>
 				<div className="w-full">
 					<div className="p-3 border-black border-2 city-comp bg-gray-700">
-					<h1 className="text-2xl text-white mb-2">The City of {this.state.city.name}</h1>
+						<h1 className="text-2xl text-white mb-2">
+							The City of {this.state.city.name}
+						</h1>
 						<CityDetailPage
 							city={this.state.city}
 							posts={this.state.posts}
