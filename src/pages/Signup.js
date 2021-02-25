@@ -25,15 +25,15 @@ class Signup extends React.Component {
       <div className="flex justify-center content-center">
         <form onSubmit={this.signupHandler}>
           <div>
-            <label className="form-label m-2" htmlFor="name">Username</label>
+            <label className="form-label" htmlFor="name">Username</label>
             <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler} />
           </div>
           <div>
-            <label className="form-label m-2 mt-4" htmlFor="email">Password</label>
+            <label className="form-label mt-2" htmlFor="email">Password</label>
             <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler} />
           </div>
           <div>
-            <label className="form-label m-2 mt-4" htmlFor="email"> Confirm Password</label>
+            <label className="form-label mt-2" htmlFor="email"> Confirm Password</label>
             <input className="form-control" type="password" id="password" name="password" value={this.state.confirmPass} onChange={this.inputChangeHandler} />
           </div>
           <button type="submit" className="btn m-2 btn-primary">Sign-Up</button>
