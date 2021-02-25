@@ -13,4 +13,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use('/api/users', routes.users);
 app.use('/api/v1/cities', routes.cities);
 app.use('/api/v1/posts', routes.posts);
+app.use('/api/v1/comments', routes.comments);
 app.listen(port, () => console.log('connected to port ' + port));
