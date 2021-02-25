@@ -1,6 +1,5 @@
 import React from 'react';
 import CommentsList from '../components/commentsComp/CommentsList';
-// import { Link } from 'react-router-dom';
 
 class ShowPost extends React.Component {
 	state = {
@@ -23,6 +22,22 @@ class ShowPost extends React.Component {
 		},
 		comments: [],
 		body: '',
+	};
+
+	handleCommentFetch = () => {
+		return fetch(
+			`http://localhost:4000/api/v1/comments/filter/${this.state.post._id}`
+		)
+			.then((response) => {
+				return response.json();
+			})
+			.then((jsonData) => {
+				this.setState({
+					...this.state,
+					comments: jsonData,
+				});
+			})
+			.catch((err) => console.log(err));
 	};
 
 	componentDidMount() {
@@ -51,23 +66,6 @@ class ShowPost extends React.Component {
 			.catch((err) => console.log(err));
 	}
 
-	handleCommentFetch = () => {
-		return fetch(
-			`http://localhost:4000/api/v1/comments/filter/${this.state.post._id}`
-		)
-			.then((response) => {
-				return response.json();
-			})
-			.then((jsonData) => {
-				console.log(jsonData);
-				this.setState({
-					...this.state,
-					comments: jsonData,
-				});
-			})
-			.catch((err) => console.log(err));
-	};
-
 	handleComment = (event) => {
 		this.setState({
 			...this.state,
@@ -89,13 +87,13 @@ class ShowPost extends React.Component {
 			},
 			body: JSON.stringify(commentObj),
 		})
-			.then((result) => result.json())
-			.then((data) => data)
+			.then((data) => {
+				this.handleCommentFetch();
+				document.getElementById('comment').value = '';
+			})
 			.catch((err) => {
 				console.log(err);
 			});
-		this.handleCommentFetch();
-		document.getElementById('comment').value = '';
 	};
 
 	handleDelete = (props) => {
@@ -103,13 +101,9 @@ class ShowPost extends React.Component {
 			'Are you sure you want to delete this post?'
 		);
 		if (confirmed) {
-			console.log('Fire away Sara Doe!');
 			fetch(`http://localhost:4000/api/v1/comments/${props}`, {
 				method: 'DELETE',
 			})
-				.then((response) => {
-					return response.json();
-				})
 				.then((jsonData) => {
 					this.handleCommentFetch();
 				})
@@ -125,6 +119,7 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
+
 
 				<div classname="container">
 					<div className="flex-row col-span-1 float-right w-2/5 m-4">
@@ -149,6 +144,7 @@ class ShowPost extends React.Component {
 								htmlFor="body"
 							>
 								Body:
+
 					</label>
 							<p className="text-left p-3" id="body">
 								{this.state.post.body}
@@ -170,6 +166,8 @@ class ShowPost extends React.Component {
 							</form>
 						</div>
 
+
+
 						<section id="comments-feed">
 							<CommentsList
 								comments={this.state.comments}
@@ -179,6 +177,7 @@ class ShowPost extends React.Component {
 
 					</div>
 				</div>
+
 			</div>
 		);
 	}
