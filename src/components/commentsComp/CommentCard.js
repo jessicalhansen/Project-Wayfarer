@@ -1,4 +1,11 @@
 const CommentCard = (props) => {
-	return <p>{props.body}</p>;
+	return (
+		<div>
+			<p key={props.comment._id}>{props.comment.body}</p>
+			<button onClick={() => props.handleDelete(props.comment._id)}>
+				Delete
+			</button>
+		</div>
+	);
 };
 export default CommentCard;
