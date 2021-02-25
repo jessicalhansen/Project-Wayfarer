@@ -49,9 +49,7 @@ class Login extends React.Component {
 							onChange={this.inputChangeHandler}
 						/>
 					</div>
-					<button type="submit" className="btn btn-primar m-3">
-						Login
-					</button>
+					<button type="submit" className="btn m-2 btn-primary hover:bg-green-600">Login</button>
 				</form>
 			</div>
 		);
