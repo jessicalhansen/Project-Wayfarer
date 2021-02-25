@@ -97,6 +97,7 @@ class ShowPost extends React.Component {
 		this.handleCommentFetch();
 		document.getElementById('comment').value = '';
 	};
+
 	handleDelete = (props) => {
 		let confirmed = window.confirm(
 			'Are you sure you want to delete this post?'
