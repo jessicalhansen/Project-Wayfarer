@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class NewPost extends React.Component {
 	state = {
@@ -38,6 +39,7 @@ class NewPost extends React.Component {
 		document.getElementById('post-form').style.display = 'none';
 		document.getElementById('title').value = '';
 		document.getElementById('body').value = '';
+		this.props.handleRerender(cityObj.cityId);
 	};
 
 	render() {

@@ -21,6 +21,7 @@ class CitiesPage extends React.Component {
 			.then((res) => res.json())
 			.then((jsonData) => {
 				this.setState({
+					...this.state,
 					cities: jsonData,
 				});
 			})
@@ -62,16 +63,32 @@ class CitiesPage extends React.Component {
 				})
 				.then((jsonData) => {
 					console.log(jsonData);
-					const postCopy = { ...this.state.posts };
-					const updatedPosts = postCopy.filter((postObj) => {
-						return postObj._id !== postId;
+					const stateCopy = { ...this.state };
+					const updatedPosts = stateCopy.posts.filter((post) => {
+						return postId !== post._id;
 					});
 					this.setState({
-						post: updatedPosts,
+						...this.state,
+						posts: updatedPosts,
 					});
 				})
 				.catch((err) => console.log(err));
 		}
+	};
+
+	handleRerender = (cityId) => {
+		fetch(`http://localhost:4000/api/v1/posts/filter/${cityId}`)
+			.then((response) => {
+				return response.json();
+			})
+			.then((jsonData) => {
+				console.log(jsonData);
+				this.setState({
+					...this.state,
+					posts: jsonData,
+				});
+			})
+			.catch((err) => console.log(err));
 	};
 
 	render() {
@@ -90,12 +107,12 @@ class CitiesPage extends React.Component {
 					<h1 className="text-4xl text-gray-700">
 						The city of {this.state.city.name}
 					</h1>
-
 					<div className="p-3 border-black border-2 city-comp bg-gray-700">
 						<CityDetailPage
 							city={this.state.city}
 							posts={this.state.posts}
 							deletePost={this.handleDeletePost}
+							handleRerender={this.handleRerender}
 						/>
 					</div>
 				</div>

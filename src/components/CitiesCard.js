@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const CitiesCard = (props) => {
 	const cityObj = {
 		id: props.cities._id,
@@ -12,18 +14,20 @@ const CitiesCard = (props) => {
 	};
 
 	return (
-		<div
-			onClick={displayCity}
-			key={props.cities._id}
-			className="city-card bg-gray-300 border-black border-2 p-3 m-4 flex justify-between"
-		>
-			<img
-				className="list-img"
-				src={props.cities.image}
-				alt={props.cities.name + ' Image'}
-			/>
-			<p className="text-4xl mr-6 mt-2"> {props.cities.name}</p>
-		</div>
+		<Link to={`/cities/${props.cities._id}`}>
+			<div
+				onClick={displayCity}
+				key={props.cities._id}
+				className="city-card bg-gray-300 border-black border-2 p-3 m-4 flex justify-between"
+			>
+				<img
+					className="list-img"
+					src={props.cities.image}
+					alt={props.cities.name + ' Image'}
+				/>
+				<p className="text-4xl mr-6 mt-2"> {props.cities.name}</p>
+			</div>
+		</Link>
 	);
 };
 
