@@ -168,3 +168,11 @@ body {
   border: 8px solid rgba(209, 213, 219);
   background-color: rgba(0, 0, 0, 0.5);
 }
+.signup {
+  background: url('https://i.imgur.com/8sv58bi.jpg');
+  background-repeat: none;
+  background-size: cover;
+
+.text-right {
+  cursor: pointer;
+}

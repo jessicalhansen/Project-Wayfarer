@@ -4,14 +4,28 @@ import NewPostComponent from '../components/postComponents/NewPostComponent';
 import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
-	showForm = () => {
+	state = {
+		isOpen: false
+	}
+
+	showModal = () => {
 		const form = document.getElementById('post-form');
-		if (form.style.display === 'none') {
-			return (form.style.display = 'block');
+
+		if (!this.state.isOpen) {
+			this.setState({
+				isOpen: true
+			})
+			form.style.display = 'block'
 		} else {
-			return (form.style.display = 'none');
+			this.setState({
+				isOpen: false
+			})
+			form.style.display = 'none'
+
 		}
 	};
+	
+
 
 	render() {
 		return (
@@ -21,7 +35,8 @@ class CityDetailPage extends React.Component {
 				</div>
 				<div className="text-right my-4 mx-3">
 					<button
-						onClick={this.showForm}
+						id="modal-button"
+						onClick={this.showModal}
 						className="btn bg-green-600 rounded border-1 border-black"
 					>
 						+
