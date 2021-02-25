@@ -10,6 +10,7 @@ class CityDetailPage extends React.Component {
 
 	showModal = () => {
 		const form = document.getElementById('post-form');
+
 		if (!this.state.isOpen) {
 			this.setState({
 				isOpen: true
@@ -20,6 +21,7 @@ class CityDetailPage extends React.Component {
 				isOpen: false
 			})
 			form.style.display = 'none'
+
 		}
 	};
 	
