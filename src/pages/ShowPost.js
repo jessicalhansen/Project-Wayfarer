@@ -87,51 +87,55 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
-				<div>
-					<img src={this.state.city.image} alt="cityImage" />
-				</div>
-				<div>
-					<label
-						className="bg-gray-700 border-black border-3 text-gray-300 w-full"
-						htmlFor="title"
-					>
-						Title:
-					</label>
-					<h1 className="text-left p-3" id="title">
-						{this.state.post.title}
-					</h1>
-				</div>
-				<div>
-					<label
-						className="bg-gray-700 border-black border-3 text-gray-300 w-full"
-						htmlFor="body"
-					>
-						Body:
-					</label>
-					<p className="text-left p-3" id="body">
-						{this.state.post.body}
-					</p>
-				</div>
-				<div className="flex justify-evenly">
-					<Link to={`/editpost/${this.state.post._id}`}>
+				<div className="container">
+					<div className="flex-row col-span-1 float-right w-2/5 m-4">
+						<img src={this.state.city.image} alt="cityImage" />
+					</div>
+					<div className="flex-row col-span-2 float-left w-1/2 m-4">
 						<div>
-							<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
-								Edit Post
-							</button>
+							<label
+								className="bg-gray-600 border-black border-2 text-gray-300 w-full"
+								htmlFor="title"
+							>
+								Title:
+					</label>
+							<h1 className="text-center text-3xl p-2 mb-12" id="title">
+								{this.state.post.title}
+							</h1>
 						</div>
-					</Link>
-					<div>
-						<button
-							className="btn btn-danger"
-							onClick={() => this.handleDeletePost()}
-						>
-							Delete
-						</button>
+						<div>
+							<label
+								className="bg-gray-700 border-black border-3 text-gray-300 w-full"
+								htmlFor="body"
+							>
+								Body:
+					</label>
+							<p className="text-left p-3" id="body">
+								{this.state.post.body}
+							</p>
+						</div>
+						<div className="m-3">
+							<div className="flex justify-center">
+								<Link to={`/editpost/${this.state.post._id}`}>
+									<div>
+										<button className="btn bg-gray-700 text-gray-300 hover:bg-green-600 mr-12">
+											Edit Post
+							</button>
+									</div>
+								</Link>
+								<div>
+									<button
+										className="btn btn-danger  hover:bg-green-600 ml-12"
+										onClick={() => this.handleDeletePost()}
+									>Delete</button>
+								</div>
+							</div>
+						</div>
+						<section id="comments-feed">
+							<CommentsList comments={this.state.comments} />
+						</section>
 					</div>
 				</div>
-				<section id="comments-feed">
-					<CommentsList comments={this.state.comments} />
-				</section>
 			</div>
 		);
 	}
