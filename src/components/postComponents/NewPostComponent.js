@@ -1,11 +1,10 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class NewPost extends React.Component {
 	state = {
 		title: '',
 		body: '',
-		userId: '',
-		cityId: '',
 	};
 
 	handleNewPost = (event) => {
@@ -17,17 +16,18 @@ class NewPost extends React.Component {
 
 	handleSubmitPost = (event) => {
 		event.preventDefault();
-		this.setState({
-			...this.state,
+		const cityObj = {
+			title: this.state.title,
+			body: this.state.body,
 			userId: this.props.city.id,
 			cityId: this.props.city.id,
-		});
+		};
 		fetch('http://localhost:4000/api/v1/posts', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(this.state),
+			body: JSON.stringify(cityObj),
 		})
 			.then((result) => result.json())
 			.then((data) => data)
@@ -35,10 +35,11 @@ class NewPost extends React.Component {
 				console.log(err);
 			});
 
-		this.setState({ title: '', body: '', userId: '', cityId: '' });
+		this.setState({ title: '', body: '' });
 		document.getElementById('post-form').style.display = 'none';
 		document.getElementById('title').value = '';
 		document.getElementById('body').value = '';
+		this.props.handleRerender(cityObj.cityId);
 	};
 
 	render() {
@@ -51,7 +52,6 @@ class NewPost extends React.Component {
 						onSubmit={this.handleSubmitPost}
 						className="flex flex-col align-evenly form"
 					>
-						<div>{/* This is where the dropdown goes for cities */}</div>
 						<div>
 							<label className="form-label" htmlFor="title">
 								Title
@@ -68,9 +68,9 @@ class NewPost extends React.Component {
 							<label className="form-label" htmlFor="body">
 								Body
 							</label>
-							<input
+							<textarea
 								className="form-control"
-								type="text-area"
+								type="text"
 								id="body"
 								name="body"
 								onChange={this.handleNewPost}

@@ -1,25 +1,26 @@
 import React from 'react';
-import CityDetailCard from '../components/CityDetailCard';
+import CityDetailCard from '../components/cities/CityDetailCard';
 import NewPostComponent from '../components/postComponents/NewPostComponent';
+import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
-	state = {
-		posts: [],
-	};
-
-	showForm = () => {
+	showForm = (event) => {
 		const form = document.getElementById('post-form');
-		if (form.style.display === 'none') {
-			form.style.display = 'block';
-		} else {
-			form.style.display = 'none';
-		}
+		window.onclick = () => {
+			if (form.style.display === 'none') {
+				form.style.display = 'block';
+			} else {
+				form.style.display = 'none';
+			}
+		};
 	};
 
 	render() {
 		return (
-			<div>
-				<CityDetailCard city={this.props.city} />
+			<div id="detail">
+				<div id="detail-card">
+					<CityDetailCard city={this.props.city} />
+				</div>
 				<div className="text-right my-4 mx-3">
 					<button
 						onClick={this.showForm}
@@ -29,16 +30,18 @@ class CityDetailPage extends React.Component {
 					</button>
 				</div>
 				<div id="post-feed">
-					<div className="bg-gray-300 border-black border-2 rounded">
-						<h1>Title: Im not sure</h1>
-						<p>
-							Body : Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Est, sint.
-						</p>
+					<div id="post" className="bg-gray-800 border-black border-2 rounded">
+						<PostsList
+							posts={this.props.posts}
+							deletePost={this.props.deletePost}
+						/>
 					</div>
 				</div>
 				<div id="post-form" className="bg-gray-700 text-gray-300">
-					<NewPostComponent city={this.props.city} />
+					<NewPostComponent
+						city={this.props.city}
+						handleRerender={this.props.handleRerender}
+					/>
 				</div>
 			</div>
 		);

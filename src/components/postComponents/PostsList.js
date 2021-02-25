@@ -2,11 +2,18 @@ import React from 'react';
 import PostsCard from './PostsCard';
 
 const PostsList = (props) => {
-    const posts = props.posts.map((postsObj) => {
-        return <PostsCard key={postsObj._id} posts={postsObj} />;
-    });
+	const filteredPosts = [];
+	props.posts.map((postsObj) => {
+		return filteredPosts.unshift(
+			<PostsCard
+				key={postsObj._id}
+				post={postsObj}
+				deletePost={props.deletePost}
+			/>
+		);
+	});
 
-    return <ul>{posts}</ul>;
+	return <ul>{filteredPosts}</ul>;
 };
 
 export default PostsList;

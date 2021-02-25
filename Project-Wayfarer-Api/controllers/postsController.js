@@ -2,7 +2,7 @@ const db = require('../models');
 
 const index = (req, res) => {
 	// Query DB for all Posts
-	db.Post.find({}, (err, allPosts) => {
+	db.Post.find({ cityId: req.params.cityId }, (err, allPosts) => {
 		if (err) return console.log(err);
 		// Send back data as JSON object
 		return res.json(allPosts);
