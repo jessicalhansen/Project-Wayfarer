@@ -1,10 +1,11 @@
 import React from 'react';
 import CommentsList from '../components/commentsComp/CommentsList';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class ShowPost extends React.Component {
 	state = {
 		post: {
+			id: '',
 			title: '',
 			body: '',
 			userId: '',
@@ -14,33 +15,15 @@ class ShowPost extends React.Component {
 			name: '',
 		},
 		city: {
+			id: '',
 			name: '',
 			state: '',
 			country: '',
 			image: '',
 		},
 		comments: [],
+		body: '',
 	};
-
-	handleDeletePost = () => {
-		let confirmed = window.confirm(
-			'Are you sure you want to delete this post?'
-		);
-		if (confirmed) {
-			console.log('Fire away Sara Doe!');
-			fetch(`http://localhost:4000/api/v1/posts/${this.state.post._id}`, {
-				method: 'DELETE',
-			})
-				.then((response) => {
-					return response.json();
-				})
-				.then((jsonData) => {
-					this.props.history.push('/cities');
-				})
-				.catch((err) => console.log(err));
-		}
-	};
-
 	componentDidMount() {
 		fetch(`http://localhost:4000/api/v1/posts/${this.props.match.params.id}`)
 			.then((response) => {
@@ -60,25 +43,74 @@ class ShowPost extends React.Component {
 							...this.state,
 							city: jsonData,
 						});
-						fetch(
-							`http://localhost:4000/api/v1/comments/filter/${this.state.post.cityId}`
-						)
-							.then((response) => {
-								return response.json();
-							})
-							.then((jsonData) => {
-								this.setState({
-									...this.state,
-									comments: jsonData || [],
-								});
-							})
-							.catch((err) => console.log(err));
+						this.handleCommentFetch();
 					})
 					.catch((err) => console.log(err));
 			})
 			.catch((err) => console.log(err));
 	}
-
+	handleCommentFetch = () => {
+		return fetch(
+			`http://localhost:4000/api/v1/comments/filter/${this.state.post._id}`
+		)
+			.then((response) => {
+				return response.json();
+			})
+			.then((jsonData) => {
+				console.log(jsonData);
+				this.setState({
+					...this.state,
+					comments: jsonData,
+				});
+			})
+			.catch((err) => console.log(err));
+	};
+	handleComment = (event) => {
+		this.setState({
+			...this.state,
+			[event.target.name]: event.target.value,
+		});
+	};
+	handleSubmit = (event) => {
+		event.preventDefault();
+		const commentObj = {
+			body: this.state.body,
+			userId: this.state.post._id,
+			postId: this.state.post._id,
+		};
+		fetch('http://localhost:4000/api/v1/comments', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(commentObj),
+		})
+			.then((result) => result.json())
+			.then((data) => data)
+			.catch((err) => {
+				console.log(err);
+			});
+		this.handleCommentFetch();
+		document.getElementById('comment').value = '';
+	};
+	handleDelete = (props) => {
+		let confirmed = window.confirm(
+			'Are you sure you want to delete this post?'
+		);
+		if (confirmed) {
+			console.log('Fire away Sara Doe!');
+			fetch(`http://localhost:4000/api/v1/comments/${props}`, {
+				method: 'DELETE',
+			})
+				.then((response) => {
+					return response.json();
+				})
+				.then((jsonData) => {
+					this.handleCommentFetch();
+				})
+				.catch((err) => console.log(err));
+		}
+	};
 	render() {
 		return (
 			<div id="show-post">
@@ -87,7 +119,7 @@ class ShowPost extends React.Component {
 						{this.state.city.name}
 					</h1>
 				</div>
-				<div>
+				<div className="w-64 mx-auto">
 					<img src={this.state.city.image} alt="cityImage" />
 				</div>
 				<div>
@@ -97,7 +129,7 @@ class ShowPost extends React.Component {
 					>
 						Title:
 					</label>
-					<h1 className="text-left p-3" id="title">
+					<h1 className="text-left p-3 text-3xl" id="title">
 						{this.state.post.title}
 					</h1>
 				</div>
@@ -112,25 +144,25 @@ class ShowPost extends React.Component {
 						{this.state.post.body}
 					</p>
 				</div>
-				<div className="flex justify-evenly">
-					<Link to={`/editpost/${this.state.post._id}`}>
+				<div>
+					<form action="POST" onSubmit={this.handleSubmit}>
 						<div>
-							<button className="btn bg-gray-700 text-gray-300 hover:text-gray-300 hover:bg-gray-800">
-								Edit Post
-							</button>
+							<label htmlFor="comment">Comment: </label>
+							<input
+								type="text"
+								id="comment"
+								onChange={this.handleComment}
+								name="body"
+							/>
+							<input type="submit" className="btn" />
 						</div>
-					</Link>
-					<div>
-						<button
-							className="btn btn-danger"
-							onClick={() => this.handleDeletePost()}
-						>
-							Delete
-						</button>
-					</div>
+					</form>
 				</div>
 				<section id="comments-feed">
-					<CommentsList comments={this.state.comments} />
+					<CommentsList
+						comments={this.state.comments}
+						handleDelete={this.handleDelete}
+					/>
 				</section>
 			</div>
 		);
