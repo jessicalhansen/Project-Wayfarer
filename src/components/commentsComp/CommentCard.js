@@ -1,20 +1,10 @@
 const CommentCard = (props) => {
 	return (
-		<div
-			id="comment-card"
-			className="flex justify-between  border-gray-100 border-3 p-3 bg-gray-400 text-black rounded-md m-2"
-		>
-			<div>
-				<p className="text-2xl">{props.comment.body}</p>
-			</div>
-			<div>
-				<button
-					className="btn btn-danger"
-					onClick={() => props.handleDelete(props.comment._id)}
-				>
-					Delete
-				</button>
-			</div>
+		<div className="w-1/2 flex">
+			<p className="float-left m-2 p-2" key={props.comment._id}>{props.comment.body}</p>
+			<button className="btn btn-danger float-right m-2" onClick={() => props.handleDelete(props.comment._id)}>
+				Delete
+			</button>
 		</div>
 	);
 };
