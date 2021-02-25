@@ -120,7 +120,6 @@ class ShowPost extends React.Component {
 					</h1>
 				</div>
 
-
 				<div classname="container">
 					<div className="flex-row col-span-1 float-right w-2/5 m-4">
 						<img src={this.state.city.image} alt="cityImage" />
@@ -132,7 +131,7 @@ class ShowPost extends React.Component {
 							htmlFor="title"
 						>
 							Title:
-					</label>
+						</label>
 
 						<h1 className="text-center p-3 text-3xl" id="title">
 							{this.state.post.title}
@@ -144,8 +143,7 @@ class ShowPost extends React.Component {
 								htmlFor="body"
 							>
 								Body:
-
-					</label>
+							</label>
 							<p className="text-left p-3" id="body">
 								{this.state.post.body}
 							</p>
@@ -161,12 +159,13 @@ class ShowPost extends React.Component {
 										name="body"
 										className="m-2"
 									/>
-									<input type="submit" className="btn btn-primary hover:bg-green-600 m-2" />
+									<input
+										type="submit"
+										className="btn btn-primary hover:bg-green-600 m-2"
+									/>
 								</div>
 							</form>
 						</div>
-
-
 
 						<section id="comments-feed">
 							<CommentsList
@@ -174,10 +173,8 @@ class ShowPost extends React.Component {
 								handleDelete={this.handleDelete}
 							/>
 						</section>
-
 					</div>
 				</div>
-
 			</div>
 		);
 	}
