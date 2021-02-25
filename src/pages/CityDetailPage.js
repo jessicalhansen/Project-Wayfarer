@@ -6,13 +6,11 @@ import PostsList from '../components/postComponents/PostsList';
 class CityDetailPage extends React.Component {
 	showForm = () => {
 		const form = document.getElementById('post-form');
-		window.onclick = () => {
-			if (form.style.display === 'none') {
-				form.style.display = 'block';
-			} else {
-				form.style.display = 'none';
-			}
-		};
+		if (form.style.display === 'none') {
+			return (form.style.display = 'block');
+		} else {
+			return (form.style.display = 'none');
+		}
 	};
 
 	render() {

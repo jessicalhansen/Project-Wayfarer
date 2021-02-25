@@ -152,12 +152,13 @@ class ShowPost extends React.Component {
 							<form action="POST" onSubmit={this.handleSubmit}>
 								<div>
 									<label htmlFor="comment">Comment: </label>
-									<input
+									<textarea
 										type="text"
 										id="comment"
+										required
 										onChange={this.handleComment}
 										name="body"
-										className="m-2"
+										className="m-2 w-full"
 									/>
 									<input
 										type="submit"
