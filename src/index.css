@@ -39,8 +39,8 @@ h1 {
   height: 20vh;
 }
 #city {
-  max-height: 80vh;
-  min-height: 80vh;
+  max-height: 81vh;
+  min-height: 81vh;
   box-sizing: border-box;
   overflow: scroll;
 }

@@ -120,7 +120,7 @@ class ShowPost extends React.Component {
 					</h1>
 				</div>
 
-				<div classname="container">
+				<div className="container">
 					<div className="flex-row col-span-1 float-right w-2/5 m-4">
 						<img src={this.state.city.image} alt="cityImage" />
 					</div>
@@ -129,7 +129,7 @@ class ShowPost extends React.Component {
 						<label
 							className="bg-gray-700 border-black border-3 text-gray-300 w-full"
 							htmlFor="title">
-								Title:
+							Title:
 						</label>
 
 						<h1 className="text-center p-3 text-3xl" id="title">
