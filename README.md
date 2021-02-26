@@ -124,7 +124,7 @@ $ npm i
 
 |                 Jessica Hansen                 |                 Mohamed Abdulah                 |                 Joey Giardina                 |                 Nicholas Gacicia                 |
 | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-| [![Jessica Hansen](https://i.imgur.com/0UuugA3.jpg?s=200)]() | [![Mohamed Abdulah](https://i.imgur.com/1WZcINe.png?s=200)]() | [![Joey Giardina](https://i.imgur.com/Oz6i83g.jpg?s=200)]() | [![Nicholas Gacicia](https://i.imgur.com/dYlnr6t.jpg?2?s=200)]() |
+| [![Jessica Hansen](https://i.imgur.com/0UuugA3.jpg?s=200)]() | [![Mohamed Abdulah](https://ca.slack-edge.com/T0351JZQ0-U01FBN8UN2H-1e2a0a833db5-512?s=200)]() | [![Joey Giardina](https://i.imgur.com/Oz6i83g.jpg?s=200)]() | [![Nicholas Gacicia](https://i.imgur.com/dYlnr6t.jpg?2?s=200)]() |
 |         <a href="https://git.generalassemb.ly/jessicalh" target="_blank">`git.generalassemb.ly/jessicalh`</a>         |         <a href="https://git.generalassemb.ly/mrdanishjr1992" target="_blank">`git.generalassemb.ly/mrdanishjr1992`</a>         |         <a href="https://git.generalassemb.ly/jgiardina" target="_blank">`git.generalassemb.ly/jgiardina`</a>         |         <a href="https://git.generalassemb.ly/nicholasgacicia" target="_blank">`git.generalassemb.ly/nicholasgacicia`</a>         |
 
 ---
