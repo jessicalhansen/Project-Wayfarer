@@ -1,130 +1,96 @@
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+[![Project Wayfarer](https://i.imgur.com/DMl6V2z.jpg&s=200)](https://i.imgur.com/DMl6V2z.jpg)
 
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
+# Project Wayfarer
+#### General Assembly SEI 1207
+by: Mohamed Abdulah, Jessica Hansen, Nicholas Gacicia & Joey Giardina
 
-***INSERT GRAPHIC HERE (include hyperlink in image)***
+> GitHub Repo: https://git.generalassemb.ly/jessicalh/Project-Wayfarer
 
-# Repository Title Goes Here
+> Travelers Platform
 
-> Subtitle or Short Description Goes Here
+> An online community of travelers and adventurers sharing memories and planning new adventures.
 
-> ideally one sentence
+> Built for General Assembly's SEIR 12/07/2020 cohort
+___
 
-> include terms/tags that can be searched
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![License](http://img.shields.io/:license-ICS-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-7/7-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
 
-**Badges will go here**
+---
+## Dev Dependencies
+- "@tailwindcss/postcss7-compat": "^2.0.3"
+-	"autoprefixer": "^9.8.6"
+-	"nodemon": "^2.0.7"
+-	"postcss": "^7.0.35"
+-	"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
 
-- build status
-- issues (waffle.io maybe)
-- devDependencies
-- npm package
-- coverage
-- slack
-- downloads
-- gitter chat
-- license
-- etc.
+## npm Packages
+-	"react": "^17.0.1"
+-	"react-dom": "^17.0.1"
+-	"react-router-dom": "^5.2.0"
+-	"react-scripts": "4.0.3"
+-	"react-scroll": "^1.8.1"
+-	"react-social-icons": "^4.1.0"
+-	"@craco/craco": "^6.1.1"
+- "@brainhubeu/react-carousel": "^1.19.26"
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![Dependency Status](http://img.shields.io/gemnasium/badges/badgerbadgerbadger.svg?style=flat-square)](https://gemnasium.com/badges/badgerbadgerbadger) [![Coverage Status](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger) [![Code Climate](http://img.shields.io/codeclimate/github/badges/badgerbadgerbadger.svg?style=flat-square)](https://codeclimate.com/github/badges/badgerbadgerbadger) [![Github Issues](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/issues.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/badges/badgerbadgerbadger/pulls.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger/pulls) [![Gem Version](http://img.shields.io/gem/v/badgerbadgerbadger.svg?style=flat-square)](https://rubygems.org/gems/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![Badges](http://img.shields.io/:badges-9/9-ff6799.svg?style=flat-square)](https://github.com/badges/badgerbadgerbadger)
 
-- For more on these wonderful ~~badgers~~ badges, refer to <a href="http://badges.github.io/badgerbadgerbadger/" target="_blank">`badgerbadgerbadger`</a>.
-
-***INSERT ANOTHER GRAPHIC HERE***
-
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
-
-- Most people will glance at your `README`, *maybe* star it, and leave
-- Ergo, people should understand instantly what your project is about based on your repo
-
-> Tips
-
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
-
-> GIF Tools
-
-- Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
-- For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
-
-**Recordit**
-
-![Recordit GIF](http://g.recordit.co/iLN6A0vSD8.gif)
-
-**ttystudio**
-
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
+[![Travel Coding](https://i.imgur.com/fWJPkcv.jpg)](https://i.imgur.com/fWJPkcv.jpg)
 
 ---
 
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
-
-- [Installation](#installation)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
+## Table of Contents
+- [Project Wayfarer](#project-wayfarer)
+      - [General Assembly SEI 1207](#general-assembly-sei-1207)
+  - [Dev Dependencies](#dev-dependencies)
+  - [npm Packages](#npm-packages)
+  - [Table of Contents](#table-of-contents)
+  - [HomePage](#homepage)
+  - [Installation](#installation)
+    - [Clone](#clone)
+    - [Setup](#setup)
+  - [Contributing](#contributing)
+    - [Step 1](#step-1)
+    - [Step 2](#step-2)
+    - [Step 3](#step-3)
+    - [Step 4](#step-4)
+  - [Team](#team)
+  - [License](#license)
 
 
 ---
 
-## Example (Optional)
-
-```javascript
-// code away!
-
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
+## HomePage
+[![HomePage](https://i.imgur.com/fN2AMIj.png)](https://i.imgur.com/fN2AMIj.png)
 
 ---
 
 ## Installation
-
-- All the `code` required to get started
-- Images of what it should look like
-
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://git.generalassemb.ly/jessicalh/Project-Wayfarer`
+
+```shell
+$ git clone https://git.generalassemb.ly/jessicalh/Project-Wayfarer
+$ cd Project-Wayfarer
+$ npm i
+```
+
 
 ### Setup
 
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
+> Update and install dependencies from the root directory in your terminal first
 
 ```shell
-$ brew update
-$ brew install fvcproductions
+$ npm update
+$ npm i
 ```
 
-> now install npm and bower packages
+> Now install the router dependencies
 
 ```shell
-$ npm install
-$ bower install
+$ cd Project-Wayfarer-Api
+$ npm i
 ```
-
-- For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
-
----
-
-## Features
-## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
-
-- Going into more detail on code and technologies used
-- I utilized this nifty <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for this sample `README`.
 
 ---
 
@@ -138,61 +104,34 @@ $ bower install
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
+  - Clone this repo to your local machine using `https://git.generalassemb.ly/jessicalh/Project-Wayfarer`
 
 ### Step 2
 
-- **HACK AWAY!** 🔨🔨🔨
+- Install dependencies using the instructions above
 
 ### Step 3
 
-- 🔃 Create a new pull request using <a href="https://github.com/joanaz/HireDot2/compare/" target="_blank">`https://github.com/joanaz/HireDot2/compare/`</a>.
+- **HACK AWAY!** 🔨🔨🔨
+
+### Step 4
+
+- 🔃 Create a new pull request using <a href="https://git.generalassemb.ly/jessicalh/Project-Wayfarer" target="_blank">`https://git.generalassemb.ly/jessicalh/Project-Wayfarer`</a>.
 
 ---
 
 ## Team
 
-> Or Contributors/People
-
-|                 <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a>                 |                 <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a>                 |                 <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a>                 |
-| :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-| [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) |
-|         <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a>         |         <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a>         |         <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a>         |
-
-- You can just grab their GitHub profile image URL
-- You should probably resize their picture using `?s=200` at the end of the image URL.
-
----
-
-## FAQ
-
-- **How do I do *specifically* so and so?**
-    - No problem! Just do this.
-
----
-
-## Support
-
-Reach out to me at one of the following places!
-
-- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
-
----
-
-## Donations (Optional)
-
-- You could include a <a href="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" target="_blank">Gratipay</a> link as well.
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/fvcproductions/)
-
+|                 Jessica Hansen                 |                 Mohamed Abdulah                 |                 Joey Giardina                 |                 Nicholas Gacicia                 |
+| :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+| [![Jessica Hansen](https://i.imgur.com/0UuugA3.jpg?s=200)]() | [![Mohamed Abdulah](https://i.imgur.com/1WZcINe.png?s=200)]() | [![Joey Giardina](https://i.imgur.com/Oz6i83g.jpg?s=200)]() | [![Nicholas Gacicia](https://i.imgur.com/dYlnr6t.jpg?2?s=200)]() |
+|         <a href="https://git.generalassemb.ly/jessicalh" target="_blank">`git.generalassemb.ly/jessicalh`</a>         |         <a href="https://git.generalassemb.ly/mrdanishjr1992" target="_blank">`git.generalassemb.ly/mrdanishjr1992`</a>         |         <a href="https://git.generalassemb.ly/jgiardina" target="_blank">`git.generalassemb.ly/jgiardina`</a>         |         <a href="https://git.generalassemb.ly/nicholasgacicia" target="_blank">`git.generalassemb.ly/nicholasgacicia`</a>         |
 
 ---
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![License](http://img.shields.io/:license-ICS-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
+- **[ICS license](http://[opensource.org/licenses/mit-license.php](https://opensource.org/licenses/ISC))**
+- Copyright 2021 © General Assembly SEIR 1207 - Group 1

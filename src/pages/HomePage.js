@@ -7,41 +7,28 @@ const HomePage = () => {
 				<Carousel />
 			</div>
 
-			<div className="m-6">
+			<div className="mt-3">
 				<h2 className="text-4xl">
-					Wayfarer is an application, where we provide cities of the world and
-					the environment to contribute comments and reviews of these locations.
+					Wayfarer is...
 				</h2>
 			</div>
 			<div id="home-item-container">
 				<article className="home-item bg-yellow-50">
-					<h2 className="text-4xl mb-5">Topic 1</h2>
+					<h2 className="text-4xl mb-3">a Platform</h2>
 					<p>
-						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
-						reprehenderit elit voluptate. Lorem est amet nulla consequat cillum
-						elit in cillum sunt occaecat aliqua consequat. Voluptate fugiat
-						laborum nostrud quis ex anim enim est dolor enim nulla. Ullamco
-						culpa occaecat tempor mollit ut ex et eiusmod.
+						... to share your travel advice, knowledge and first-hand experiences of your travel adventures to destinations around the globe.
 					</p>
 				</article>
-				<article className="home-item bg-yellow-50">
-					<h2 className="text-4xl mb-5">Topic 2</h2>
+			<article className="home-item bg-yellow-50">
+					<h2 className="text-4xl mb-3">a Resource</h2>
 					<p>
-						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
-						reprehenderit elit voluptate. Lorem est amet nulla consequat cillum
-						elit in cillum sunt occaecat aliqua consequat. Voluptate fugiat
-						laborum nostrud quis ex anim enim est dolor enim nulla. Ullamco
-						culpa occaecat tempor mollit ut ex et eiusmod.
+						... whether it's you're first time leaving the the nest or a seasoned traveling veteran, there is always a new place to discover on Wayfarer.
 					</p>
 				</article>
-				<article className="home-item bg-yellow-50">
-					<h2 className="text-4xl mb-5">Topic 3</h2>
+			<article className="home-item bg-yellow-50">
+					<h2 className="text-4xl mb-3">a Community</h2>
 					<p>
-						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
-						reprehenderit elit voluptate. Lorem est amet nulla consequat cillum
-						elit in cillum sunt occaecat aliqua consequat. Voluptate fugiat
-						laborum nostrud quis ex anim enim est dolor enim nulla. Ullamco
-						culpa occaecat tempor mollit ut ex et eiusmod.
+						... to connect you with like-minded individuals who have a passion for travel and advice to plan your next big adventure.
 					</p>
 				</article>
 			</div>
