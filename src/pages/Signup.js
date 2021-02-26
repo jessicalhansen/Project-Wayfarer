@@ -58,7 +58,7 @@ class Signup extends React.Component {
 										Username
 									</label>
 									<input
-										className="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+										className="w-full px-5 py-1 text-gray-700 bg-blue-100 rounded focus:outline-none focus:bg-white"
 										type="text"
 										id="username"
 										name="username"
@@ -75,7 +75,7 @@ class Signup extends React.Component {
 										Password
 									</label>
 									<input
-										className="w-full px-5 py-1 text-gray-7000 bg-gray-300 rounded focus:outline-none focus:bg-white"
+										className="w-full px-5 py-1 text-gray-7000 bg-blue-100 rounded focus:outline-none focus:bg-white"
 										type="password"
 										id="password"
 										name="password"
@@ -92,7 +92,7 @@ class Signup extends React.Component {
 										Confirm Password
 									</label>
 									<input
-										className="w-full px-5 py-1 text-gray-7000 bg-gray-300 rounded focus:outline-none focus:bg-white"
+										className="w-full px-5 py-1 text-gray-7000 bg-blue-100 rounded focus:outline-none focus:bg-white"
 										type="password"
 										id="confirmPass"
 										name="confirmPass"
@@ -105,7 +105,7 @@ class Signup extends React.Component {
 								<div className="mt-4 items-center">
 									<button
 										type="submit"
-										className="px-4 py-1 text-white font-light tracking-wider bg-gray-400 hover:bg-gray-800 rounded"
+										className="px-4 py-1 text-white font-light tracking-wider bg-blue-300 hover:bg-gray-700 rounded"
 									>
 										Sign-Up
 									</button>
@@ -115,26 +115,8 @@ class Signup extends React.Component {
 					</div>
 				</div>
 			</div>
-
-			// <div className="flex justify-center content-center">
-			//   <form onSubmit={this.signupHandler}>
-			//     <div>
-			//       <label className="form-label mt-8" htmlFor="name">Username</label>
-			//       <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler} />
-			//     </div>
-			//     <div>
-			//       <label className="form-label mt-2" htmlFor="email">Password</label>
-			//       <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler} />
-			//     </div>
-			//     <div>
-			//       <label className="form-label mt-2" htmlFor="email"> Confirm Password</label>
-			//       <input className="form-control" type="password" id="password" name="password" value={this.state.confirmPass} onChange={this.inputChangeHandler} />
-			//     </div>
-			//     <button type="submit" className="btn m-2 btn-primary hover:bg-green-600">Sign-Up</button>
-			//   </form>
-			// </div>
-		);
-	}
+    );
+  }
 }
 
 export default Signup;

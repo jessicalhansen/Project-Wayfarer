@@ -37,8 +37,8 @@ class CityDetailPage extends React.Component {
 					>+</button>
 				</div>
 				<div id="post-feed">
-					<div id="post" className="bg-gray-800 border-black border-2 rounded">
-						<div className="text-white">Posts: {this.props.posts.length}</div>
+					<div id="post" className="border-black border-2 rounded">
+						<h1 className="text-xl text-white">Posts: {this.props.posts.length}</h1>
 						<PostsList
 							posts={this.props.posts}
 							deletePost={this.props.deletePost}
