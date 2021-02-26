@@ -1,7 +1,7 @@
 const CityDetailCard = (props) => {
 	return (
 		<>
-			<div className="city-detail bg-gray-300 mx-auto m-2">
+			<div className="city-detail bg-blue-100 mx-auto m-2">
 				<div className="flex">
 					<div className="container">
 						<h1 className="text-2xl font-bold">{props.city.name}</h1><hr />
