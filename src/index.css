@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   font-size: 1em; /* 16 px */
 }
 body {
-  background-color: #DBEAFE;
+  background-color: #dbeafe;
   color: rgb(0, 0, 0);
   font-family: "Acme", sans-serif;
   text-align: center;
@@ -22,7 +21,7 @@ h1 {
   font-family: "Acme", sans-serif;
 }
 #app {
-  background-color: #EFF6FF;
+  background-color: #eff6ff;
   min-height: 100vh;
   padding: 0.5em;
 }
@@ -88,11 +87,11 @@ h1 {
 #show-post {
   min-height: 90vh;
   max-height: 95vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 #comment-list {
   min-height: 50vh;
-  max-height: 50vh;
+  /* max-height: 50vh; */
   overflow: scroll;
 }
 #comment-img {
@@ -153,8 +152,7 @@ h1 {
 }
 #home-item-container {
   display: flex;
-  margin: 2em;
-  overflow: scroll;
+  margin: 0.5em;
 }
 .home-item {
   padding: 2em;
@@ -182,7 +180,7 @@ h1 {
   margin-top: 15vh;
 }
 .loginform {
-  border: 8px solid #93C5FD;
+  border: 8px solid #93c5fd;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .signup {
