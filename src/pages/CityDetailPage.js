@@ -5,27 +5,24 @@ import PostsList from '../components/postComponents/PostsList';
 
 class CityDetailPage extends React.Component {
 	state = {
-		isOpen: false
-	}
+		isOpen: false,
+	};
 
 	showModal = () => {
 		const form = document.getElementById('post-form');
 
 		if (!this.state.isOpen) {
 			this.setState({
-				isOpen: true
-			})
-			form.style.display = 'block'
+				isOpen: true,
+			});
+			form.style.display = 'block';
 		} else {
 			this.setState({
-				isOpen: false
-			})
-			form.style.display = 'none'
-
+				isOpen: false,
+			});
+			form.style.display = 'none';
 		}
 	};
-
-
 
 	render() {
 		return (
@@ -44,6 +41,7 @@ class CityDetailPage extends React.Component {
 				</div>
 				<div id="post-feed">
 					<div id="post" className="bg-gray-800 border-black border-2 rounded">
+						<div className="text-white">Posts: {this.props.posts.length}</div>
 						<PostsList
 							posts={this.props.posts}
 							deletePost={this.props.deletePost}
