@@ -53,7 +53,7 @@ class Login extends React.Component {
 										Username
 									</label>
 									<input
-										className="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+										className="w-full px-5 py-1 text-gray-700 bg-blue-100 rounded focus:outline-none focus:bg-white"
 										type="text"
 										id="username"
 										name="username"
@@ -70,7 +70,7 @@ class Login extends React.Component {
 										Password
 									</label>
 									<input
-										className="w-full px-5 py-1 text-gray-7000 bg-gray-300 rounded focus:outline-none focus:bg-white"
+										className="w-full px-5 py-1 text-gray-7000 bg-blue-100 rounded focus:outline-none focus:bg-white"
 										type="password"
 										id="password"
 										name="password"
@@ -83,7 +83,7 @@ class Login extends React.Component {
 								<div className="mt-4 items-center">
 									<button
 										type="submit"
-										className="px-4 py-1 text-white font-light tracking-wider bg-gray-400 hover:bg-gray-800 rounded"
+										className="px-4 py-1 text-white font-light tracking-wider bg-blue-300 hover:bg-gray-700 rounded"
 									>
 										Login
 									</button>

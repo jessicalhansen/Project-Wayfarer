@@ -18,7 +18,7 @@ const CitiesCard = (props) => {
 			<div
 				onClick={displayCity}
 				key={props.cities._id}
-				className="city-card bg-gray-300 border-black border-2 p-2 m-1 flex justify-between"
+				className="city-card bg-blue-100 border-black border-2 p-2 m-1 flex justify-between"
 			>
 				<img
 					className="list-img pl-8"

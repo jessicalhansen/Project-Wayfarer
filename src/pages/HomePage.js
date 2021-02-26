@@ -14,7 +14,7 @@ const HomePage = () => {
 				</h2>
 			</div>
 			<div id="home-item-container">
-				<article className="home-item">
+				<article className="home-item bg-yellow-50">
 					<h2 className="text-4xl mb-5">Topic 1</h2>
 					<p>
 						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
@@ -24,7 +24,7 @@ const HomePage = () => {
 						culpa occaecat tempor mollit ut ex et eiusmod.
 					</p>
 				</article>
-				<article className="home-item">
+				<article className="home-item bg-yellow-50">
 					<h2 className="text-4xl mb-5">Topic 2</h2>
 					<p>
 						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
@@ -34,7 +34,7 @@ const HomePage = () => {
 						culpa occaecat tempor mollit ut ex et eiusmod.
 					</p>
 				</article>
-				<article className="home-item">
+				<article className="home-item bg-yellow-50">
 					<h2 className="text-4xl mb-5">Topic 3</h2>
 					<p>
 						Nulla ea ullamco ad id anim et. Mollit ullamco est commodo aute
