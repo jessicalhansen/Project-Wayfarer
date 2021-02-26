@@ -10,7 +10,6 @@ class CityDetailPage extends React.Component {
 
 	showModal = () => {
 		const form = document.getElementById('post-form');
-
 		if (!this.state.isOpen) {
 			this.setState({
 				isOpen: true,
@@ -35,9 +34,7 @@ class CityDetailPage extends React.Component {
 						id="modal-button"
 						onClick={this.showModal}
 						className="btn bg-green-600 rounded border-1 border-black"
-					>
-						+
-					</button>
+					>+</button>
 				</div>
 				<div id="post-feed">
 					<div id="post" className="bg-gray-800 border-black border-2 rounded">
