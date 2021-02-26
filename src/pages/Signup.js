@@ -36,7 +36,7 @@ class Signup extends React.Component {
 					console.log(err);
 				});
 		} else {
-			// return <p>Passwords Dont Match!</p>;
+			return <p>Passwords Dont Match!</p>;
 		}
 	};
 

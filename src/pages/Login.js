@@ -15,8 +15,24 @@ class Login extends React.Component {
 
 	loginHandler = (event) => {
 		event.preventDefault();
-		console.log(this.state);
-		this.props.updateAuth();
+		const userObj = {
+			username: this.state.username,
+			password: this.state.password,
+		};
+		fetch('http://localhost:4000/api/v1/users/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(userObj),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				this.props.history.push('/cities');
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 
 	render() {
