@@ -17,7 +17,7 @@ app.use(
 		saveUninitialized: false,
 	})
 );
-app.use('/api/users', routes.users);
+app.use('/api/v1/users', routes.users);
 app.use('/api/v1/cities', routes.cities);
 app.use('/api/v1/posts', routes.posts);
 app.use('/api/v1/comments', routes.comments);
