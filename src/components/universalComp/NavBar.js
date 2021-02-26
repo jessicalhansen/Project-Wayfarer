@@ -17,7 +17,7 @@ export default function NavBar() {
 						to="/"
 						id="logo"
 						activeClassName="active-link text-gray-800 bg-gray-300"
-						className="logo inline-flex py-3 px-2 mx-2 text-white hover:text-green-700 text-3xl font-mono font-bold">
+						className="logo inline-flex py-3 px-3 mx-2 text-white hover:text-green-700 text-3xl font-mono font-bold">
 							Wayfarer
 						</NavLink>
 				</div>
