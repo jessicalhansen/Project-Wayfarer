@@ -16,7 +16,7 @@ html {
 body {
   background-color: rgba(209, 213, 219);
   color: rgb(0, 0, 0);
-  font-family: "Open Sans, sans-serif";
+  font-family: "Acme", sans-serif;
   text-align: center;
   width: 100vw;
   height: 100vh;
@@ -196,13 +196,7 @@ h1 {
   cursor: pointer;
 }
 #worldlogo {
-<<<<<<< HEAD
-	height:60px;
-	width: 62px;
-	color: white;
-=======
   height: 60px;
   width: 62px;
   color: white;
->>>>>>> 00fa102b26c28fef3d886e9c5c06b202f5c4cddb
 }
