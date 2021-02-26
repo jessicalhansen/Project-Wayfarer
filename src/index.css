@@ -150,32 +150,36 @@ body {
 	margin: 2em;
 }
 .home-item {
-	padding: 1em;
+	padding: 2em;
 	line-height: 1.5em;
 	border: double black 5px;
+	height: 25vh;
+	margin: 1em;
 }
 .carousel img {
 	height: 35vh;
 }
 .login {
-  background: url('https://i.imgur.com/DnWDPMU.jpg');
-  background-repeat: none;
-  background-size: cover;
+	background: url('https://i.imgur.com/DnWDPMU.jpg');
+	background-repeat: none;
+	background-size: cover;
 }
 .leading-loose {
-  margin-top: 15vh;
+	margin-top: 15vh;
 }
 .loginform {
-  border: 8px solid rgba(209, 213, 219);
-  background-color: rgba(0, 0, 0, 0.5);
+	border: 8px solid rgba(209, 213, 219);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .signup {
+
   background: url('https://i.imgur.com/8sv58bi.jpg');
   background-repeat: none;
   background-size: cover;
+
 }
 .text-right {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #worldlogo {

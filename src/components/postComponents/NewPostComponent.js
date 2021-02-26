@@ -4,7 +4,7 @@ class NewPost extends React.Component {
 	state = {
 		title: '',
 		body: '',
-		isOpen: false
+		isOpen: false,
 	};
 
 	handleNewPost = (event) => {
@@ -46,21 +46,23 @@ class NewPost extends React.Component {
 		const form = document.getElementById('post-form');
 		if (!this.state.isOpen) {
 			this.setState({
-				isOpen: true
-			})
-			form.style.display = 'block'
+				isOpen: true,
+			});
+			form.style.display = 'block';
 		} else {
 			this.setState({
-				isOpen: false
-			})
-			form.style.display = 'none'
+				isOpen: false,
+			});
+			form.style.display = 'none';
 		}
 	};
 
 	render() {
 		return (
 			<div className="text-center">
-				<p onClick={this.closeModal} className="text-right">X</p>
+				<p onClick={this.closeModal} className="text-right">
+					X
+				</p>
 				<h1 className="text-3xl my-2">New Post</h1>
 				<div>
 					<form
@@ -78,6 +80,7 @@ class NewPost extends React.Component {
 								id="title"
 								name="title"
 								onChange={this.handleNewPost}
+								required
 							/>
 						</div>
 						<div>
@@ -90,6 +93,7 @@ class NewPost extends React.Component {
 								id="body"
 								name="body"
 								onChange={this.handleNewPost}
+								required
 							/>
 						</div>
 						<div className="my-4">
