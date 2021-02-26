@@ -26,19 +26,19 @@ const show = (req, res) => {
 
 const create = (req, res) => {
 	console.log(req.body);
-	const post = {
+	const user = {
 		username: req.body.username,
 		password: req.body.password,
 	};
 	// Query DB to create a new user
-	db.User.create(post, (err, userCreated) => {
+	db.User.create(user, (err, userCreated) => {
 		if (err) {
-			console.log(err);
+			return console.log(err);
 		}
 		if (!userCreated) {
-			return res.redirect('/user/new');
+			return res.json('None created');
 		}
-		res.json(userCreated);
+		return res.json(userCreated);
 	});
 };
 

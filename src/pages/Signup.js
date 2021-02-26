@@ -16,7 +16,28 @@ class Signup extends React.Component {
 
 	signupHandler = (event) => {
 		event.preventDefault();
-		console.log(this.state);
+		if (this.state.password === this.state.confirmPass) {
+			const userObj = {
+				username: this.state.username,
+				password: this.state.password,
+			};
+			fetch('http://localhost:4000/api/v1/users', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(userObj),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					this.props.history.push('/login');
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		} else {
+			// return <p>Passwords Dont Match!</p>;
+		}
 	};
 
 	render() {
@@ -27,7 +48,7 @@ class Signup extends React.Component {
 						<div className="leading-loose ml-10">
 							<form
 								className="loginform max-w-sm m-4 p-10 rounded"
-								onSubmit={this.loginHandler}
+								onSubmit={this.signupHandler}
 							>
 								<p className="text-white font-medium text-center text-lg font-bold mb-3">
 									SIGN-UP
@@ -66,15 +87,15 @@ class Signup extends React.Component {
 								<div className="mt-2">
 									<label
 										className="block text-sm text-white"
-										htmlFor="password"
+										htmlFor="confirmPass"
 									>
 										Confirm Password
 									</label>
 									<input
 										className="w-full px-5 py-1 text-gray-7000 bg-gray-300 rounded focus:outline-none focus:bg-white"
 										type="password"
-										id="password"
-										name="password"
+										id="confirmPass"
+										name="confirmPass"
 										value={this.state.confirmPass}
 										onChange={this.inputChangeHandler}
 										required
