@@ -8,7 +8,7 @@ const CitiesList = (props) => {
 				key={citiesObj._id}
 				cities={citiesObj}
 				showCityHandler={props.showCityHandler}
-				/>
+			/>
 		);
 	});
 

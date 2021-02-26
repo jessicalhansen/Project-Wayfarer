@@ -66,7 +66,7 @@ class EditPost extends React.Component {
 							onChange={this.handleEditPost}
 						/>
 					</div>
-					<button type="submit">Update Post</button>
+					<button type="submit" className="btn btn-primary hover:bg-green-500">Update Post</button>
 				</form>
 			</div>
 		);
