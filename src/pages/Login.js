@@ -45,7 +45,7 @@ class Login extends React.Component {
 								className="loginform max-w-sm m-4 p-10 rounded"
 								onSubmit={this.loginHandler}
 							>
-								<p className="text-white font-medium text-center text-lg font-bold mb-3">
+								<p className="text-white font-medium text-center text-lg mb-3">
 									LOGIN
 								</p>
 								<div className="">
