@@ -8,10 +8,10 @@ const HomePage = () => {
 			</div>
 
 			<div className="m-6">
-				<h1 className="text-4xl">
+				<h2 className="text-4xl">
 					Wayfarer is an application, where we provide cities of the world and
 					the environment to contribute comments and reviews of these locations.
-				</h1>
+				</h2>
 			</div>
 			<div id="home-item-container">
 				<article className="home-item">
