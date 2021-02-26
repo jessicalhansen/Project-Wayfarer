@@ -24,7 +24,7 @@ class CityDetailPage extends React.Component {
 
 		}
 	};
-	
+
 
 
 	render() {
