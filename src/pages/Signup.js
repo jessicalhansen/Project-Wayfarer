@@ -50,7 +50,7 @@ class Signup extends React.Component {
 								className="loginform max-w-sm m-4 p-10 rounded"
 								onSubmit={this.signupHandler}
 							>
-								<p className="text-white font-medium text-center text-lg font-bold mb-3">
+								<p className="text-white font-medium text-center text-lg mb-3">
 									SIGN-UP
 								</p>
 								<div className="">
@@ -116,23 +116,23 @@ class Signup extends React.Component {
 				</div>
 			</div>
 
-			/* <div className="flex justify-center content-center">
-        <form onSubmit={this.signupHandler}>
-          <div>
-            <label className="form-label mt-8" htmlFor="name">Username</label>
-            <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler} />
-          </div>
-          <div>
-            <label className="form-label mt-2" htmlFor="email">Password</label>
-            <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler} />
-          </div>
-          <div>
-            <label className="form-label mt-2" htmlFor="email"> Confirm Password</label>
-            <input className="form-control" type="password" id="password" name="password" value={this.state.confirmPass} onChange={this.inputChangeHandler} />
-          </div>
-          <button type="submit" className="btn m-2 btn-primary hover:bg-green-600">Sign-Up</button>
-        </form>
-      </div> */
+			// <div className="flex justify-center content-center">
+			//   <form onSubmit={this.signupHandler}>
+			//     <div>
+			//       <label className="form-label mt-8" htmlFor="name">Username</label>
+			//       <input className="form-control" type="text" id="username" name="username" value={this.state.username} onChange={this.inputChangeHandler} />
+			//     </div>
+			//     <div>
+			//       <label className="form-label mt-2" htmlFor="email">Password</label>
+			//       <input className="form-control" type="password" id="password" name="password" value={this.state.password} onChange={this.inputChangeHandler} />
+			//     </div>
+			//     <div>
+			//       <label className="form-label mt-2" htmlFor="email"> Confirm Password</label>
+			//       <input className="form-control" type="password" id="password" name="password" value={this.state.confirmPass} onChange={this.inputChangeHandler} />
+			//     </div>
+			//     <button type="submit" className="btn m-2 btn-primary hover:bg-green-600">Sign-Up</button>
+			//   </form>
+			// </div>
 		);
 	}
 }
