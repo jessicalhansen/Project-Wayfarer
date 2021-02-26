@@ -115,12 +115,12 @@ class ShowPost extends React.Component {
 		return (
 			<div id="show-post">
 				<div>
-					<h1 className="border-black border-3 text-4xl">
+					<h1 className="border-black border-3 text-4xl p-3">
 						{this.state.city.name}
 					</h1>
 				</div>
 
-				<div classname="container">
+				<div className="container">
 					<div className="flex-row col-span-1 float-right w-2/5 m-4">
 						<img src={this.state.city.image} alt="cityImage" />
 					</div>
@@ -128,8 +128,7 @@ class ShowPost extends React.Component {
 					<div className="flex-row col-span-2 float-left w-1/2 m-4">
 						<label
 							className="bg-gray-700 border-black border-3 text-gray-300 w-full"
-							htmlFor="title"
-						>
+							htmlFor="title">
 							Title:
 						</label>
 
@@ -140,8 +139,7 @@ class ShowPost extends React.Component {
 						<div>
 							<label
 								className="bg-gray-700 border-black border-3 text-gray-300 w-full"
-								htmlFor="body"
-							>
+								htmlFor="body">
 								Body:
 							</label>
 							<p className="text-left p-3" id="body">

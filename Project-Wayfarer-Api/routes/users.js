@@ -1,19 +1,18 @@
-// const router = require('express').Router();
-// const controllers = require('../controllers');
+const router = require('express').Router();
+const controllers = require('../controllers');
 
-// // User Index
-// router.get('/', controllers.users.index);
+// User Create
+router.post('/', controllers.users.create);
+// User login
+router.post('/login', controllers.users.login);
 
-// // User Show
-// router.get('/:id', controllers.users.show);
+// User get
+router.get('/:id', controllers.users.show);
 
-// // User Create
-// router.post('/', controllers.users.create);
+// User Update
+router.put('/:id', controllers.users.update);
 
-// // User Update
-// router.put('/:id', controllers.users.update);
+// User Delete
+router.delete('/:id', controllers.users.destroy);
 
-// // User Delete
-// router.delete('/:id', controllers.users.destroy);
-
-// module.exports = router;
+module.exports = router;

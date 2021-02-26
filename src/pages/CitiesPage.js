@@ -7,9 +7,9 @@ class CitiesPage extends React.Component {
 		isLoggedIn: this.props.isLoggedIn,
 		cities: [],
 		city: {
-			id: '60347f311e79196784a75654',
-			name: 'San-Fran',
-			state: 'Cali',
+			id: '6034574546b6f1ba2688f8d7',
+			name: 'San Francisco',
+			state: 'CA',
 			country: 'USA',
 			image: 'https://i.imgur.com/Zq59o10.jpg',
 		},
