@@ -1,18 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
+import logo from '../../images/worldlogo2.png';
+
 
 export default function NavBar() {
+
+
 	return (
 		<header className="bg-gray-800">
 			<div className="container mx-auto flex justify-evenly">
+			<img src={logo} alt={'worldlogo'} id="worldlogo"/>
 				<NavLink
 					exact
 					to="/"
 					activeClassName="active-link text-gray-800 bg-gray-300"
-					className="logo inline-flex py-3 px-3 mx-5 text-white hover:text-green-700 text-2xl font-bold cursive tracking-widest"
+					className="logo inline-flex py-3 px-3 mx-5 text-white hover:text-green-700 text-3xl font-bold Helvetica Neue"
 				>
-					Project Wayfarer
+					 Wayfarer
 				</NavLink>
 				<nav className="flex">
 					<NavLink

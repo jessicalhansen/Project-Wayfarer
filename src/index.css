@@ -102,6 +102,7 @@ body {
 	-ms-border-radius: 1.5em;
 	-o-border-radius: 1.5em;
 	cursor: pointer;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .list-img {
 	width: 100px;
@@ -171,10 +172,18 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 .signup {
-	background: url('https://i.imgur.com/8sv58bi.jpg');
-	background-repeat: none;
-	background-size: cover;
+
+  background: url('https://i.imgur.com/8sv58bi.jpg');
+  background-repeat: none;
+  background-size: cover;
+
 }
 .text-right {
 	cursor: pointer;
+}
+
+#worldlogo {
+	height:60px;
+	width: 62px;
+	color: white;
 }
