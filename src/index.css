@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --almost-black: #34393e;
+  --beige: #dad4da;
+  --green: #c0c56b;
+  --lighter-blue: #2288a8;
+  --darker-blue: #47646a;
+}
+
 html {
 	font-size: 1em; /* 16 px */
 }
 body {
-	background-color: rgba(209, 213, 219);
+	background-color: var(--beige);
 	color: rgb(0, 0, 0);
 	text-align: center;
 	width: 100vw;
@@ -17,7 +25,7 @@ body {
 	overflow: hidden;
 }
 #app {
-	background-color: rgba(209, 213, 219);
+	background-color: var(--beige);
 	min-height: 100vh;
 	padding: 0.5em;
 }
@@ -158,6 +166,9 @@ body {
 }
 .carousel img {
 	height: 35vh;
+}
+.BrainhubCarousel__arrows {
+  background-color: var(--lighter-blue);
 }
 .login {
 	background: url('https://i.imgur.com/DnWDPMU.jpg');
