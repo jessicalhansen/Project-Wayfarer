@@ -16,14 +16,14 @@ const PostsCard = (props) => {
 	};
 	return (
 		<>
-			<div className="post-card bg-gray-300 border-black border-2 p-2 m-1.5 flex flex-col">
+			<div className="post-card bg-blue-100 border-black border-2 p-2 m-1.5 flex flex-col">
 				<Link to={`/showpost/${props.post._id}`}>
 					<h1 className="text-xl"> {props.post.title}</h1>
 					<p className="text-sm"> {props.post.body}</p>
 				</Link>
 				<div className="flex justify-between px-5 py-3">
 					<button
-						className="btn btn-danger hover:bg-green-600"
+						className="btn btn-danger hover:bg-red-900"
 						onClick={() => props.deletePost(props.post._id)}
 					>
 						Delete
@@ -32,7 +32,7 @@ const PostsCard = (props) => {
 						<p>{formatDate()}</p>
 					</div>
 					<Link to={`/editpost/${props.post._id}`}>
-						<button className="btn bg-gray-700 text-gray-300 hover:bg-green-600">
+						<button className="text-gray-50 btn bg-blue-900  hover:bg-green-600">
 							Edit Post
 						</button>
 					</Link>
