@@ -4,6 +4,8 @@
 #### General Assembly SEI 1207
 by: Mohamed Abdulah, Jessica Hansen, Nicholas Gacicia & Joey Giardina
 
+> View Application: https://wayfarer-app-1207.herokuapp.com/
+
 > GitHub Repo: https://git.generalassemb.ly/jessicalh/Project-Wayfarer
 
 > Travelers Platform
